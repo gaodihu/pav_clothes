@@ -32,17 +32,18 @@
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
         <div class="table-responsive">
           <table class="table table-bordered">
-            <thead>
-              <tr>
+
+
+
+            <tbody>
+            <tr>
                 <td class="text-center"><?php echo $column_image; ?></td>
                 <td class="text-center"><?php echo $column_name; ?></td>
                 <td class="text-center"><?php echo $column_model; ?></td>
                 <td class="text-center"><?php echo $column_quantity; ?></td>
                 <td class="text-center"><?php echo $column_price; ?></td>
                 <td class="text-center"><?php echo $column_total; ?></td>
-              </tr>
-            </thead>
-            <tbody>
+            </tr>
               <?php foreach ($products as $product) { ?>
               <tr>
                 <td class="text-center"><?php if ($product['thumb']) { ?>
