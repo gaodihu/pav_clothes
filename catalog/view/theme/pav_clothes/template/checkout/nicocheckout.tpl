@@ -129,7 +129,7 @@ echo $header;
                                 </div>
                                 <?php }?>
                             <?php } ?>
-                                   
+
                                     <!--customer address list  end-->
 
                             <div id="shipping-new" style="display: <?php echo (($addresses && isset($customer_id)) ? 'none' : 'block'); ?>;">

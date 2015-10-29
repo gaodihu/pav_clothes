@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50624
 File Encoding         : 65001
 
-Date: 2015-10-27 18:29:19
+Date: 2015-10-29 18:16:33
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -31,21 +31,45 @@ CREATE TABLE `oc_address` (
   `postcode` varchar(10) NOT NULL,
   `country_id` int(11) NOT NULL DEFAULT '0',
   `zone_id` int(11) NOT NULL DEFAULT '0',
+  `country_code` varchar(50) NOT NULL,
+  `zone_code` varchar(50) NOT NULL,
   `custom_field` text NOT NULL,
   `telephone` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`address_id`),
   KEY `customer_id` (`customer_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_address
 -- ----------------------------
-INSERT INTO `oc_address` VALUES ('1', '1', 'demo', 'demo', 'demo', 'akasta', 'Indon', 'bi', '756125', '230', '3776', '', null);
-INSERT INTO `oc_address` VALUES ('2', '2', 'abc', 'abcda', '', 'abc', '', 'abc', 'abc', '222', '3529', '', null);
-INSERT INTO `oc_address` VALUES ('3', '3', 'huong', 'do', 'Akasta', 'French', 'French1', 'Hn', '0000', '214', '3295', '', null);
-INSERT INTO `oc_address` VALUES ('4', '4', 'charles', 'chan', '', 'hql 002', '', 'shenzhen', '562514', '222', '3538', '', null);
-INSERT INTO `oc_address` VALUES ('5', '5', '', '', '', '', '', '', '', '0', '0', '', null);
-INSERT INTO `oc_address` VALUES ('6', '6', 'test1', 'test2', '', 'test3', '', 'test4', '3625412', '14', '203', '', null);
+INSERT INTO `oc_address` VALUES ('1', '1', 'demo', 'demo', 'demo', 'akasta', 'Indon', 'bi', '756125', '230', '3776', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('2', '2', 'abc', 'abcda', '', 'abc', '', 'abc', 'abc', '222', '3529', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('3', '3', 'huong', 'do', 'Akasta', 'French', 'French1', 'Hn', '0000', '214', '3295', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('4', '4', 'charles', 'chan', '', 'hql 002', '', 'shenzhen', '562514', '222', '3538', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('5', '5', '', '', '', '', '', '', '', '0', '0', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('6', '6', 'test1', 'test2', '', 'test3', '', 'test4', '3625412', '14', '203', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('11', '0', 'charles', 'chan', '', 'address1', '', 'city', '256423', '223', '3674', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('12', '0', 'charles', 'chan', '', 'address1', '', 'city', '256423', '223', '3674', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('13', '0', 'charles', 'chan', '', 'address1', '', 'city', '123456', '223', '3674', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('14', '0', 'charles', 'chan', '', 'address1', '', 'city', '123456', '223', '3621', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('15', '0', 'charles', 'chan', '', 'address1', '', 'city', '123456', '223', '3620', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('16', '0', 'charles', 'chan', '', 'address1', '', 'city', '123456', '223', '3616', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('17', '0', 'charles', 'chan', '', 'address1', '', 'city', '123456', '223', '3620', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('18', '0', 'charles', 'chan', '', 'address1', '', 'city', '123456', '223', '3627', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('19', '0', 'charles', 'chan', '', 'address1', '', 'city', '123456', '223', '3614', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('20', '0', 'charles', 'chan', '', 'address1', '', 'city', '123456', '223', '3614', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('21', '0', 'charles', 'chan', '', 'address1', '', 'city', '123456', '223', '3617', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('22', '0', 'charles', 'chan', '', 'address1', '', 'city', '123456', '199', '3037', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('23', '0', 'charles', 'chan', '', 'address1', '', 'city', '123456', '199', '3037', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('24', '0', 'charles', 'chan', '', 'address1', '', 'city', '123456', '223', '3617', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('25', '0', 'charles', 'chan', '', 'address1', '', 'city', '123456', '223', '3617', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('26', '0', 'charles', 'chan', '', 'address1', '', 'city', '123456', '223', '3617', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('27', '0', 'charles', 'chan', '', 'address1', '', 'city', '123456', '223', '3617', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('28', '0', 'charles', 'chan', '', 'address1', '', 'city', '123456', '223', '3614', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('29', '0', 'charles', 'chan', '', 'address1', '', 'city', '123456', '223', '3617', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('30', '0', 'charles', 'chan', '', 'address1', '', 'city', '666666', '14', '202', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('31', '7', 'charles', 'chan', '', 'address1', '', 'city', '666666', '14', '199', '', '', '', null);
+INSERT INTO `oc_address` VALUES ('32', '7', 'charles', 'chan', '', 'address1', '', 'city', '666666', '14', '199', '', '', '', null);
 
 -- ----------------------------
 -- Table structure for oc_affiliate
@@ -961,9 +985,9 @@ CREATE TABLE `oc_currency` (
 -- ----------------------------
 -- Records of oc_currency
 -- ----------------------------
-INSERT INTO `oc_currency` VALUES ('1', 'Pound Sterling', 'GBP', '£', '', '2', '0.64649999', '1', '2015-10-20 14:36:43');
-INSERT INTO `oc_currency` VALUES ('2', 'US Dollar', 'USD', '$', '', '2', '1.00000000', '1', '2015-10-20 15:20:48');
-INSERT INTO `oc_currency` VALUES ('3', 'Euro', 'EUR', '', '€', '2', '0.88309997', '1', '2015-10-20 14:36:43');
+INSERT INTO `oc_currency` VALUES ('1', 'Pound Sterling', 'GBP', '£', '', '2', '0.65480000', '1', '2015-10-29 17:35:26');
+INSERT INTO `oc_currency` VALUES ('2', 'US Dollar', 'USD', '$', '', '2', '1.00000000', '1', '2015-10-29 17:35:26');
+INSERT INTO `oc_currency` VALUES ('3', 'Euro', 'EUR', '', '€', '2', '0.91270000', '1', '2015-10-29 17:35:26');
 
 -- ----------------------------
 -- Table structure for oc_customer
@@ -992,7 +1016,7 @@ CREATE TABLE `oc_customer` (
   `token` varchar(255) NOT NULL,
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`customer_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_customer
@@ -1003,6 +1027,16 @@ INSERT INTO `oc_customer` VALUES ('3', '1', '0', 'huong', 'do', 'demo@demo.com',
 INSERT INTO `oc_customer` VALUES ('4', '1', '0', 'charles', 'chan', 'charles@myled.com', '362541', '52165', '51a6f871382b883cfefa04b8cd38121fadeea1e4', 'f96803eeb', 'a:5:{s:40:\"YToxOntzOjEwOiJwcm9kdWN0X2lkIjtpOjQwO30=\";i:10;s:40:\"YToxOntzOjEwOiJwcm9kdWN0X2lkIjtpOjMxO30=\";i:1;s:40:\"YToxOntzOjEwOiJwcm9kdWN0X2lkIjtpOjQ4O30=\";i:2;s:40:\"YToxOntzOjEwOiJwcm9kdWN0X2lkIjtpOjQ1O30=\";i:1;s:40:\"YToxOntzOjEwOiJwcm9kdWN0X2lkIjtpOjM2O30=\";i:1;}', 'a:1:{i:0;i:45;}', '0', '4', '', '127.0.0.1', '1', '1', '0', '', '2015-10-13 12:22:50');
 INSERT INTO `oc_customer` VALUES ('5', '1', '0', '', '', 'charles12@myled.com', '', '', 'afa729a46a88d6b615fde20238522dc1fe908d00', '17a9fe7c7', 'a:1:{s:40:\"YToxOntzOjEwOiJwcm9kdWN0X2lkIjtpOjQwO30=\";i:8;}', 'a:1:{i:0;i:40;}', '1', '5', '', '127.0.0.1', '1', '1', '0', '', '2015-10-20 11:37:18');
 INSERT INTO `oc_customer` VALUES ('6', '1', '0', 'test1', 'test2', 'test@126.com', '123456789', '', '7f2c375b8e0595e8db7acd2636dd36e7ad3f3807', '62fa75868', 'a:2:{s:40:\"YToxOntzOjEwOiJwcm9kdWN0X2lkIjtpOjQwO30=\";i:5;s:40:\"YToxOntzOjEwOiJwcm9kdWN0X2lkIjtpOjQ1O30=\";i:3;}', '', '0', '6', '', '127.0.0.1', '1', '1', '0', '', '2015-10-26 18:01:39');
+INSERT INTO `oc_customer` VALUES ('7', '1', '0', 'charles', 'chan', 'gaodihu12@gmail.com', '369852', '', '1d991523ba94a7826eb04fa1bca429d797253647', '5ea25d58b', 'a:1:{s:40:\"YToxOntzOjEwOiJwcm9kdWN0X2lkIjtpOjQwO30=\";i:1;}', '', '0', '31', '', '127.0.0.1', '1', '1', '0', '', '2015-10-28 14:05:48');
+INSERT INTO `oc_customer` VALUES ('8', '1', '0', '', '', 'gaodihu14@126.com', '', '', '0081598ad684ee106b36dfdb21a1992f89742c85', '0a6e8de5a', 'a:1:{s:40:\"YToxOntzOjEwOiJwcm9kdWN0X2lkIjtpOjQwO30=\";i:1;}', '', '1', '33', '', '127.0.0.1', '1', '1', '0', '', '2015-10-28 14:34:53');
+INSERT INTO `oc_customer` VALUES ('9', '1', '0', '', '', 'gaodihu15@126.com', '', '', '9d3180d4a2ea6ca5d600e0572c743882ed1eac6b', '7d57c4787', 'a:1:{s:40:\"YToxOntzOjEwOiJwcm9kdWN0X2lkIjtpOjQwO30=\";i:2;}', '', '1', '0', '', '127.0.0.1', '1', '1', '0', '', '2015-10-28 14:47:50');
+INSERT INTO `oc_customer` VALUES ('10', '1', '0', '', '', '', '', '', '11a66f6a4c5364991e15e356a067d31f7e1f7e17', '112d1294a', null, null, '0', '0', '', '127.0.0.1', '1', '1', '0', '', '2015-10-29 17:36:59');
+INSERT INTO `oc_customer` VALUES ('11', '1', '0', '', '', '', '', '', 'b33c35bb709c9737e4b2531926d156b3633d6d77', '2cba682fb', null, null, '0', '0', '', '127.0.0.1', '1', '1', '0', '', '2015-10-29 17:37:27');
+INSERT INTO `oc_customer` VALUES ('12', '1', '0', '', '', '', '', '', '33f1db53e87c215eccbb073247d2268fc425adc5', 'b04629570', null, null, '0', '0', '', '127.0.0.1', '1', '1', '0', '', '2015-10-29 17:42:16');
+INSERT INTO `oc_customer` VALUES ('13', '1', '0', '', '', '', '', '', 'fa7774bd87257257a12666aa1796b9ec18d158c7', '4053df73e', null, null, '0', '0', '', '127.0.0.1', '1', '1', '0', '', '2015-10-29 17:43:15');
+INSERT INTO `oc_customer` VALUES ('14', '1', '0', '', '', '', '', '', 'af004a6e1ad2b016e56eb770a19bc28ad064862d', '3de23a5c0', null, null, '0', '0', '', '127.0.0.1', '1', '1', '0', '', '2015-10-29 17:44:32');
+INSERT INTO `oc_customer` VALUES ('15', '1', '0', '', '', '', '', '', '3713cf80c83cfe1761d749789318ca2578c5776c', '520b50528', null, null, '0', '0', '', '127.0.0.1', '1', '1', '0', '', '2015-10-29 17:48:38');
+INSERT INTO `oc_customer` VALUES ('16', '1', '0', '', '', '', '', '', 'b84aca5abc997783d58df6b98e443a4127da1a2e', '9e24ceab3', null, null, '0', '0', '', '127.0.0.1', '1', '1', '0', '', '2015-10-29 17:51:10');
 
 -- ----------------------------
 -- Table structure for oc_customer_activity
@@ -1016,7 +1050,7 @@ CREATE TABLE `oc_customer_activity` (
   `ip` varchar(40) NOT NULL,
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`activity_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_customer_activity
@@ -1058,6 +1092,9 @@ INSERT INTO `oc_customer_activity` VALUES ('34', '6', 'address_delete', 'a:2:{s:
 INSERT INTO `oc_customer_activity` VALUES ('35', '6', 'address_delete', 'a:2:{s:11:\"customer_id\";s:1:\"6\";s:4:\"name\";s:11:\"test1 test2\";}', '127.0.0.1', '2015-10-26 18:08:23');
 INSERT INTO `oc_customer_activity` VALUES ('36', '6', 'address_delete', 'a:2:{s:11:\"customer_id\";s:1:\"6\";s:4:\"name\";s:11:\"test1 test2\";}', '127.0.0.1', '2015-10-26 18:08:24');
 INSERT INTO `oc_customer_activity` VALUES ('37', '6', 'address_delete', 'a:2:{s:11:\"customer_id\";s:1:\"6\";s:4:\"name\";s:11:\"test1 test2\";}', '127.0.0.1', '2015-10-26 18:08:25');
+INSERT INTO `oc_customer_activity` VALUES ('38', '7', 'register', 'a:2:{s:11:\"customer_id\";i:7;s:4:\"name\";s:12:\"charles chan\";}', '127.0.0.1', '2015-10-28 14:05:48');
+INSERT INTO `oc_customer_activity` VALUES ('39', '8', 'register', 'a:2:{s:11:\"customer_id\";i:8;s:4:\"name\";s:1:\" \";}', '127.0.0.1', '2015-10-28 14:34:53');
+INSERT INTO `oc_customer_activity` VALUES ('40', '9', 'register', 'a:2:{s:11:\"customer_id\";i:9;s:4:\"name\";s:1:\" \";}', '127.0.0.1', '2015-10-28 14:47:51');
 
 -- ----------------------------
 -- Table structure for oc_customer_ban_ip
@@ -1135,7 +1172,7 @@ CREATE TABLE `oc_customer_ip` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`customer_ip_id`),
   KEY `ip` (`ip`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_customer_ip
@@ -1146,6 +1183,9 @@ INSERT INTO `oc_customer_ip` VALUES ('3', '3', '192.168.1.84', '2015-01-12 09:06
 INSERT INTO `oc_customer_ip` VALUES ('4', '4', '127.0.0.1', '2015-10-13 12:22:51');
 INSERT INTO `oc_customer_ip` VALUES ('5', '5', '127.0.0.1', '2015-10-20 11:37:19');
 INSERT INTO `oc_customer_ip` VALUES ('6', '6', '127.0.0.1', '2015-10-26 18:02:01');
+INSERT INTO `oc_customer_ip` VALUES ('7', '7', '127.0.0.1', '2015-10-28 14:05:49');
+INSERT INTO `oc_customer_ip` VALUES ('8', '8', '127.0.0.1', '2015-10-28 14:34:53');
+INSERT INTO `oc_customer_ip` VALUES ('9', '9', '127.0.0.1', '2015-10-28 14:47:51');
 
 -- ----------------------------
 -- Table structure for oc_customer_login
@@ -2191,6 +2231,9 @@ CREATE TABLE `oc_order` (
   `payment_country_id` int(11) NOT NULL,
   `payment_zone` varchar(128) NOT NULL,
   `payment_zone_id` int(11) NOT NULL,
+  `payment_country_code` varchar(50) NOT NULL,
+  `payment_zone_code` varchar(50) NOT NULL,
+  `payment_telephone` varchar(50) NOT NULL,
   `payment_address_format` text NOT NULL,
   `payment_custom_field` text NOT NULL,
   `payment_method` varchar(128) NOT NULL,
@@ -2206,6 +2249,9 @@ CREATE TABLE `oc_order` (
   `shipping_country_id` int(11) NOT NULL,
   `shipping_zone` varchar(128) NOT NULL,
   `shipping_zone_id` int(11) NOT NULL,
+  `shipping_country_code` varchar(50) NOT NULL,
+  `shipping_zone_code` varchar(50) NOT NULL,
+  `shipping_telephone` varchar(50) NOT NULL,
   `shipping_address_format` text NOT NULL,
   `shipping_custom_field` text NOT NULL,
   `shipping_method` varchar(128) NOT NULL,
@@ -2228,22 +2274,48 @@ CREATE TABLE `oc_order` (
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`order_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_order
 -- ----------------------------
-INSERT INTO `oc_order` VALUES ('3', '0', 'INV-2013-00', '0', 'Lexus Store', 'http://localhost/opencart_demo/lexus_store_demo_v2.1/', '1', '1', 'demo', 'demo', 'admin@gmail.com', '0946525326', '0435621254', 'b:0;', 'demo', 'demo', 'demo', 'akasta', 'Indon', 'bi', '756125', 'Viet Nam', '230', 'Ha Noi', '3776', '', 'b:0;', 'Cash On Delivery', 'cod', 'demo', 'demo', 'demo', 'akasta', 'Indon', 'bi', '756125', 'Viet Nam', '230', 'Ha Noi', '3776', '', 'b:0;', 'Flat Shipping Rate', 'flat.flat', 'good and nice', '3229.9900', '1', '0', '0.0000', '0', '', '1', '3', 'EUR', '0.81349999', '::1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:33.0) Gecko/20100101 Firefox/33.0', 'en-US,en;q=0.5', '2014-12-08 08:28:36', '2014-12-08 08:28:39');
-INSERT INTO `oc_order` VALUES ('4', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://localhost/opencart_demo/pav_clothes_demo_v2.1/', '1', '1', 'demo', 'demo', 'admin@gmail.com', '0946525326', '0435621254', 'b:0;', 'demo', 'demo', 'demo', 'akasta', 'Indon', 'bi', '756125', 'Viet Nam', '230', 'Ha Noi', '3776', '', 'b:0;', 'Cash On Delivery', 'cod', 'demo', 'demo', 'demo', 'akasta', 'Indon', 'bi', '756125', 'Viet Nam', '230', 'Ha Noi', '3776', '', 'b:0;', 'Flat Shipping Rate', 'flat.flat', 'good and nice', '20.0000', '1', '0', '0.0000', '0', '', '1', '1', 'GBP', '0.66049999', '::1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0', 'en-US,en;q=0.5', '2015-01-07 17:27:35', '2015-01-07 17:27:36');
-INSERT INTO `oc_order` VALUES ('5', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://192.168.1.84/opencart_demo/pav_clothes_demo_v2.1/', '2', '1', 'abc', 'abcda', 'abc@gmail.com', 'abc', '', 'b:0;', 'abc', 'abcda', '', 'abc', '', 'abc', 'abc', 'United Kingdom', '222', 'Cheshire', '3529', '', 'b:0;', 'Cash On Delivery', 'cod', 'abc', 'abcda', '', 'abc', '', 'abc', 'abc', 'United Kingdom', '222', 'Cheshire', '3529', '', 'b:0;', 'Flat Shipping Rate', 'flat.flat', '', '3654.0000', '1', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '192.168.1.26', '', 'Mozilla/5.0 (Windows NT 6.3; rv:34.0) Gecko/20100101 Firefox/34.0', 'en-US,en;q=0.5', '2015-01-10 15:07:36', '2015-01-10 15:07:38');
-INSERT INTO `oc_order` VALUES ('6', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://192.168.1.84/opencart_demo/pav_clothes_demo_v2.1/', '2', '1', 'abc', 'abcda', 'abc@gmail.com', 'abc', '', 'b:0;', 'abc', 'abcda', '', 'abc', '', 'abc', 'abc', 'United Kingdom', '222', 'Cheshire', '3529', '', 'b:0;', 'Cash On Delivery', 'cod', 'abc', 'abcda', '', 'abc', '', 'abc', 'abc', 'United Kingdom', '222', 'Cheshire', '3529', '', 'b:0;', 'Flat Shipping Rate', 'flat.flat', '', '2432.0000', '1', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '192.168.1.26', '', 'Mozilla/5.0 (Windows NT 6.3; rv:34.0) Gecko/20100101 Firefox/34.0', 'en-US,en;q=0.5', '2015-01-10 15:11:19', '2015-01-10 15:11:20');
-INSERT INTO `oc_order` VALUES ('7', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://192.168.1.84/opencart_demo/pav_clothes_demo_v2.1/', '2', '1', 'abc', 'abcda', 'abc@gmail.com', 'abc', '', 'b:0;', 'abc', 'abcda', '', 'abc', '', 'abc', 'abc', 'United Kingdom', '222', 'Cheshire', '3529', '', 'b:0;', 'الدفع عند التسليم', 'cod', 'abc', 'abcda', '', 'abc', '', 'abc', 'abc', 'United Kingdom', '222', 'Cheshire', '3529', '', 'b:0;', 'Flat Shipping Rate', 'flat.flat', '', '743.9760', '1', '0', '0.0000', '0', '', '2', '1', 'GBP', '0.66270000', '192.168.1.26', '', 'Mozilla/5.0 (Windows NT 6.3; rv:34.0) Gecko/20100101 Firefox/34.0', 'en-US,en;q=0.5', '2015-01-10 15:38:18', '2015-01-10 15:38:19');
-INSERT INTO `oc_order` VALUES ('8', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://192.168.1.84/opencart_demo/pav_clothes_demo_v2.1/', '2', '1', 'abc', 'abcda', 'abc@gmail.com', 'abc', '', 'b:0;', 'abc', 'abcda', '', 'abc', '', 'abc', 'abc', 'United Kingdom', '222', 'Cheshire', '3529', '', 'b:0;', 'Cash On Delivery', 'cod', 'abc', 'abcda', '', 'abc', '', 'abc', 'abc', 'United Kingdom', '222', 'Cheshire', '3529', '', 'b:0;', 'Flat Shipping Rate', 'flat.flat', '', '2696.0000', '1', '0', '0.0000', '0', '', '1', '1', 'GBP', '0.66270000', '192.168.1.26', '', 'Mozilla/5.0 (Windows NT 6.3; rv:34.0) Gecko/20100101 Firefox/34.0', 'en-US,en;q=0.5', '2015-01-10 16:16:43', '2015-01-10 16:16:44');
-INSERT INTO `oc_order` VALUES ('9', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://192.168.1.84/opencart_demo/pav_clothes_demo_v2.1/', '3', '1', 'huong', 'do', 'demo@demo.com', '0946512546', '0435642153', 'b:0;', 'huong', 'do', 'Akasta', 'French', 'French1', 'Hn', '0000', 'Tunisia', '214', 'Gabes', '3295', '', 'b:0;', 'الدفع عند التسليم', 'cod', 'huong', 'do', 'Akasta', 'French', 'French1', 'Hn', '0000', 'Tunisia', '214', 'Gabes', '3295', '', 'b:0;', 'Flat Shipping Rate', 'flat.flat', '', '1005.0000', '1', '0', '0.0000', '0', '', '2', '2', 'USD', '1.00000000', '192.168.1.84', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0', 'en-US,en;q=0.5', '2015-01-12 09:08:54', '2015-01-12 09:08:58');
-INSERT INTO `oc_order` VALUES ('10', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '4', '1', 'charles', 'chan', 'charles@myled.com', '362541', '52165', 'b:0;', 'charles', 'chan', '', 'hql 002', '', 'shenzhen', '562514', 'United Kingdom', '222', 'Dundee', '3538', '', 'b:0;', 'PayPal Express Checkout', 'pp_express', 'charles', 'chan', '', 'hql 002', '', 'shenzhen', '562514', 'United Kingdom', '222', 'Dundee', '3538', '', 'b:0;', 'Flat Shipping Rate', 'flat.flat', '', '350.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-13 12:23:06', '2015-10-13 12:23:06');
-INSERT INTO `oc_order` VALUES ('11', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '6', '1', 'test1', 'test2', 'test@126.com', '123456789', '', 'b:0;', 'test1', 'test2', '', 'test3', '', 'test4', '3625412', 'Austria', '14', 'Salzburg', '203', '', 'b:0;', 'PayPal Express Checkout', 'pp_express', 'test1', 'test2', '', 'test3', '', 'test4', '3625412', 'Austria', '14', 'Salzburg', '203', '', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '20.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-26 18:04:33', '2015-10-26 18:04:33');
-INSERT INTO `oc_order` VALUES ('12', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '6', '1', 'test1', 'test2', 'test@126.com', '123456789', '', 'b:0;', 'test1', 'test2', '', 'test3', '', 'test4', '3625412', 'Austria', '14', 'Salzburg', '203', '', 'b:0;', 'PayPal Express Checkout', 'pp_express', 'test1', 'test2', '', 'test3', '', 'test4', '3625412', 'Austria', '14', 'Salzburg', '203', '', 'b:0;', 'Flat Shipping Rate', 'flat.flat', '', '20.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-26 18:06:20', '2015-10-26 18:06:20');
-INSERT INTO `oc_order` VALUES ('13', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '6', '1', 'test1', 'test2', 'test@126.com', '123456789', '', 'b:0;', 'test1', 'test2', '', 'test3', '', 'test4', '3625412', 'Austria', '14', 'Salzburg', '203', '', 'b:0;', 'PayPal Express Checkout', 'pp_express', 'test1', 'test2', '', 'test3', '', 'test4', '3625412', 'Austria', '14', 'Salzburg', '203', '', 'b:0;', 'Flat Shipping Rate', 'flat.flat', '', '6080.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-26 18:20:57', '2015-10-26 18:20:57');
+INSERT INTO `oc_order` VALUES ('3', '0', 'INV-2013-00', '0', 'Lexus Store', 'http://localhost/opencart_demo/lexus_store_demo_v2.1/', '1', '1', 'demo', 'demo', 'admin@gmail.com', '0946525326', '0435621254', 'b:0;', 'demo', 'demo', 'demo', 'akasta', 'Indon', 'bi', '756125', 'Viet Nam', '230', 'Ha Noi', '3776', '', '', '', '', 'b:0;', 'Cash On Delivery', 'cod', 'demo', 'demo', 'demo', 'akasta', 'Indon', 'bi', '756125', 'Viet Nam', '230', 'Ha Noi', '3776', '', '', '', '', 'b:0;', 'Flat Shipping Rate', 'flat.flat', 'good and nice', '3229.9900', '1', '0', '0.0000', '0', '', '1', '3', 'EUR', '0.81349999', '::1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:33.0) Gecko/20100101 Firefox/33.0', 'en-US,en;q=0.5', '2014-12-08 08:28:36', '2014-12-08 08:28:39');
+INSERT INTO `oc_order` VALUES ('4', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://localhost/opencart_demo/pav_clothes_demo_v2.1/', '1', '1', 'demo', 'demo', 'admin@gmail.com', '0946525326', '0435621254', 'b:0;', 'demo', 'demo', 'demo', 'akasta', 'Indon', 'bi', '756125', 'Viet Nam', '230', 'Ha Noi', '3776', '', '', '', '', 'b:0;', 'Cash On Delivery', 'cod', 'demo', 'demo', 'demo', 'akasta', 'Indon', 'bi', '756125', 'Viet Nam', '230', 'Ha Noi', '3776', '', '', '', '', 'b:0;', 'Flat Shipping Rate', 'flat.flat', 'good and nice', '20.0000', '1', '0', '0.0000', '0', '', '1', '1', 'GBP', '0.66049999', '::1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0', 'en-US,en;q=0.5', '2015-01-07 17:27:35', '2015-01-07 17:27:36');
+INSERT INTO `oc_order` VALUES ('5', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://192.168.1.84/opencart_demo/pav_clothes_demo_v2.1/', '2', '1', 'abc', 'abcda', 'abc@gmail.com', 'abc', '', 'b:0;', 'abc', 'abcda', '', 'abc', '', 'abc', 'abc', 'United Kingdom', '222', 'Cheshire', '3529', '', '', '', '', 'b:0;', 'Cash On Delivery', 'cod', 'abc', 'abcda', '', 'abc', '', 'abc', 'abc', 'United Kingdom', '222', 'Cheshire', '3529', '', '', '', '', 'b:0;', 'Flat Shipping Rate', 'flat.flat', '', '3654.0000', '1', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '192.168.1.26', '', 'Mozilla/5.0 (Windows NT 6.3; rv:34.0) Gecko/20100101 Firefox/34.0', 'en-US,en;q=0.5', '2015-01-10 15:07:36', '2015-01-10 15:07:38');
+INSERT INTO `oc_order` VALUES ('6', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://192.168.1.84/opencart_demo/pav_clothes_demo_v2.1/', '2', '1', 'abc', 'abcda', 'abc@gmail.com', 'abc', '', 'b:0;', 'abc', 'abcda', '', 'abc', '', 'abc', 'abc', 'United Kingdom', '222', 'Cheshire', '3529', '', '', '', '', 'b:0;', 'Cash On Delivery', 'cod', 'abc', 'abcda', '', 'abc', '', 'abc', 'abc', 'United Kingdom', '222', 'Cheshire', '3529', '', '', '', '', 'b:0;', 'Flat Shipping Rate', 'flat.flat', '', '2432.0000', '1', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '192.168.1.26', '', 'Mozilla/5.0 (Windows NT 6.3; rv:34.0) Gecko/20100101 Firefox/34.0', 'en-US,en;q=0.5', '2015-01-10 15:11:19', '2015-01-10 15:11:20');
+INSERT INTO `oc_order` VALUES ('7', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://192.168.1.84/opencart_demo/pav_clothes_demo_v2.1/', '2', '1', 'abc', 'abcda', 'abc@gmail.com', 'abc', '', 'b:0;', 'abc', 'abcda', '', 'abc', '', 'abc', 'abc', 'United Kingdom', '222', 'Cheshire', '3529', '', '', '', '', 'b:0;', 'الدفع عند التسليم', 'cod', 'abc', 'abcda', '', 'abc', '', 'abc', 'abc', 'United Kingdom', '222', 'Cheshire', '3529', '', '', '', '', 'b:0;', 'Flat Shipping Rate', 'flat.flat', '', '743.9760', '1', '0', '0.0000', '0', '', '2', '1', 'GBP', '0.66270000', '192.168.1.26', '', 'Mozilla/5.0 (Windows NT 6.3; rv:34.0) Gecko/20100101 Firefox/34.0', 'en-US,en;q=0.5', '2015-01-10 15:38:18', '2015-01-10 15:38:19');
+INSERT INTO `oc_order` VALUES ('8', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://192.168.1.84/opencart_demo/pav_clothes_demo_v2.1/', '2', '1', 'abc', 'abcda', 'abc@gmail.com', 'abc', '', 'b:0;', 'abc', 'abcda', '', 'abc', '', 'abc', 'abc', 'United Kingdom', '222', 'Cheshire', '3529', '', '', '', '', 'b:0;', 'Cash On Delivery', 'cod', 'abc', 'abcda', '', 'abc', '', 'abc', 'abc', 'United Kingdom', '222', 'Cheshire', '3529', '', '', '', '', 'b:0;', 'Flat Shipping Rate', 'flat.flat', '', '2696.0000', '1', '0', '0.0000', '0', '', '1', '1', 'GBP', '0.66270000', '192.168.1.26', '', 'Mozilla/5.0 (Windows NT 6.3; rv:34.0) Gecko/20100101 Firefox/34.0', 'en-US,en;q=0.5', '2015-01-10 16:16:43', '2015-01-10 16:16:44');
+INSERT INTO `oc_order` VALUES ('9', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://192.168.1.84/opencart_demo/pav_clothes_demo_v2.1/', '3', '1', 'huong', 'do', 'demo@demo.com', '0946512546', '0435642153', 'b:0;', 'huong', 'do', 'Akasta', 'French', 'French1', 'Hn', '0000', 'Tunisia', '214', 'Gabes', '3295', '', '', '', '', 'b:0;', 'الدفع عند التسليم', 'cod', 'huong', 'do', 'Akasta', 'French', 'French1', 'Hn', '0000', 'Tunisia', '214', 'Gabes', '3295', '', '', '', '', 'b:0;', 'Flat Shipping Rate', 'flat.flat', '', '1005.0000', '1', '0', '0.0000', '0', '', '2', '2', 'USD', '1.00000000', '192.168.1.84', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0', 'en-US,en;q=0.5', '2015-01-12 09:08:54', '2015-01-12 09:08:58');
+INSERT INTO `oc_order` VALUES ('10', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '4', '1', 'charles', 'chan', 'charles@myled.com', '362541', '52165', 'b:0;', 'charles', 'chan', '', 'hql 002', '', 'shenzhen', '562514', 'United Kingdom', '222', 'Dundee', '3538', '', '', '', '', 'b:0;', 'PayPal Express Checkout', 'pp_express', 'charles', 'chan', '', 'hql 002', '', 'shenzhen', '562514', 'United Kingdom', '222', 'Dundee', '3538', '', '', '', '', 'b:0;', 'Flat Shipping Rate', 'flat.flat', '', '350.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-13 12:23:06', '2015-10-13 12:23:06');
+INSERT INTO `oc_order` VALUES ('11', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '6', '1', 'test1', 'test2', 'test@126.com', '123456789', '', 'b:0;', 'test1', 'test2', '', 'test3', '', 'test4', '3625412', 'Austria', '14', 'Salzburg', '203', '', '', '', '', 'b:0;', 'PayPal Express Checkout', 'pp_express', 'test1', 'test2', '', 'test3', '', 'test4', '3625412', 'Austria', '14', 'Salzburg', '203', '', '', '', '', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '20.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-26 18:04:33', '2015-10-26 18:04:33');
+INSERT INTO `oc_order` VALUES ('12', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '6', '1', 'test1', 'test2', 'test@126.com', '123456789', '', 'b:0;', 'test1', 'test2', '', 'test3', '', 'test4', '3625412', 'Austria', '14', 'Salzburg', '203', '', '', '', '', 'b:0;', 'PayPal Express Checkout', 'pp_express', 'test1', 'test2', '', 'test3', '', 'test4', '3625412', 'Austria', '14', 'Salzburg', '203', '', '', '', '', 'b:0;', 'Flat Shipping Rate', 'flat.flat', '', '20.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-26 18:06:20', '2015-10-26 18:06:20');
+INSERT INTO `oc_order` VALUES ('13', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '6', '1', 'test1', 'test2', 'test@126.com', '123456789', '', 'b:0;', 'test1', 'test2', '', 'test3', '', 'test4', '3625412', 'Austria', '14', 'Salzburg', '203', '', '', '', '', 'b:0;', 'PayPal Express Checkout', 'pp_express', 'test1', 'test2', '', 'test3', '', 'test4', '3625412', 'Austria', '14', 'Salzburg', '203', '', '', '', '', 'b:0;', 'Flat Shipping Rate', 'flat.flat', '', '6080.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-26 18:20:57', '2015-10-26 18:20:57');
+INSERT INTO `oc_order` VALUES ('14', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu11@126.com', '11111111111', '', 'a:0:{}', 'charles', 'chan', '', 'address1', '', 'city', '256423', 'United States', '223', 'Washington', '3674', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'b:0;', 'PayPal Express Checkout', 'pp_express', 'charles', 'chan', '', 'address1', '', 'city', '256423', 'United States', '223', 'Washington', '3674', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '35.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-28 11:19:09', '2015-10-28 11:19:09');
+INSERT INTO `oc_order` VALUES ('15', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu11@126.com', '11111111111', '', 'a:0:{}', 'charles', 'chan', '', 'address1', '', 'city', '256423', 'United States', '223', 'Washington', '3674', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'b:0;', 'PayPal Express Checkout', 'pp_express', 'charles', 'chan', '', 'address1', '', 'city', '256423', 'United States', '223', 'Washington', '3674', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '35.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-28 11:19:29', '2015-10-28 11:19:29');
+INSERT INTO `oc_order` VALUES ('16', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu11@126.com', '11111111111', '', 'a:0:{}', 'charles', 'chan', '', 'address1', '', 'city', '256423', 'United States', '223', 'Washington', '3674', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'b:0;', 'PayPal Express Checkout', 'pp_express', 'charles', 'chan', '', 'address1', '', 'city', '256423', 'United States', '223', 'Washington', '3674', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '35.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-28 11:19:29', '2015-10-28 11:19:29');
+INSERT INTO `oc_order` VALUES ('17', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu11@126.com', '11111111111', '', 'a:0:{}', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Washington', '3674', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'b:0;', 'PayPal Express Checkout', 'pp_express', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Washington', '3674', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '35.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-28 11:20:36', '2015-10-28 11:20:36');
+INSERT INTO `oc_order` VALUES ('18', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu11@126.com', '11111111111', '', 'a:0:{}', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Washington', '3674', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'b:0;', 'PayPal Express Checkout', 'pp_express', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Washington', '3674', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '35.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-28 11:21:22', '2015-10-28 11:21:22');
+INSERT INTO `oc_order` VALUES ('19', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu11@126.com', '11111111111', '', 'a:0:{}', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Armed Forces Europe', '3621', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'b:0;', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Armed Forces Europe', '3621', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '35.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-28 11:21:55', '2015-10-28 11:21:55');
+INSERT INTO `oc_order` VALUES ('20', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu11@126.com', '11111111111', '', 'a:0:{}', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Armed Forces Canada', '3620', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'b:0;', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Armed Forces Canada', '3620', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '35.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-28 11:33:36', '2015-10-28 11:33:36');
+INSERT INTO `oc_order` VALUES ('21', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu11@126.com', '11111111111', '', 'a:0:{}', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Arizona', '3616', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'b:0;', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Arizona', '3616', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '35.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-28 11:37:22', '2015-10-28 11:37:22');
+INSERT INTO `oc_order` VALUES ('22', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu11@126.com', '11111111111', '', 'a:0:{}', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Armed Forces Canada', '3620', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'b:0;', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Armed Forces Canada', '3620', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '35.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-28 11:42:27', '2015-10-28 11:42:27');
+INSERT INTO `oc_order` VALUES ('23', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu11@126.com', '11111111111', '', 'a:0:{}', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Delaware', '3627', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'b:0;', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Delaware', '3627', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '35.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-28 11:50:06', '2015-10-28 11:50:06');
+INSERT INTO `oc_order` VALUES ('24', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu11@126.com', '11111111111', '', 'a:0:{}', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Alaska', '3614', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'b:0;', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Alaska', '3614', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '35.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-28 11:51:16', '2015-10-28 11:51:16');
+INSERT INTO `oc_order` VALUES ('25', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu11@126.com', '11111111111', '', 'a:0:{}', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Arkansas', '3617', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'b:0;', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Arkansas', '3617', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '35.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-28 11:53:43', '2015-10-28 11:53:43');
+INSERT INTO `oc_order` VALUES ('26', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu11@126.com', '11111111111', '', 'a:0:{}', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'Sudan', '199', 'Al Jazirah', '3037', '', '', '', '', 'b:0;', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'Sudan', '199', 'Al Jazirah', '3037', '', '', '', '', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '35.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-28 12:10:42', '2015-10-28 12:10:42');
+INSERT INTO `oc_order` VALUES ('27', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu11@126.com', '11111111111', '', 'a:0:{}', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Arkansas', '3617', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'b:0;', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Arkansas', '3617', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '35.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-28 12:16:05', '2015-10-28 12:16:05');
+INSERT INTO `oc_order` VALUES ('28', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu11@126.com', '11111111111', '', 'a:0:{}', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Arkansas', '3617', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'b:0;', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Arkansas', '3617', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '35.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-28 12:18:19', '2015-10-28 12:18:19');
+INSERT INTO `oc_order` VALUES ('29', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu11@126.com', '11111111111', '', 'a:0:{}', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Alaska', '3614', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'b:0;', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Alaska', '3614', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '35.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-28 12:19:01', '2015-10-28 12:19:01');
+INSERT INTO `oc_order` VALUES ('30', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu11@126.com', '11111111111', '', 'a:0:{}', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Arkansas', '3617', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'b:0;', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '123456', 'United States', '223', 'Arkansas', '3617', '', '', '', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '35.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-28 12:20:08', '2015-10-28 12:20:08');
+INSERT INTO `oc_order` VALUES ('31', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu12@gmail.com', '369852', '', 'a:0:{}', 'charles', 'chan', '', 'address1', '', 'city', '666666', 'Austria', '14', 'Ober&ouml;sterreich', '202', '', '', '', '', 'b:0;', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '666666', 'Austria', '14', 'Ober&ouml;sterreich', '202', '', '', '', '', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '20.0000', '2', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-28 14:00:48', '2015-10-28 14:04:37');
+INSERT INTO `oc_order` VALUES ('32', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '7', '1', 'charles', 'chan', 'gaodihu12@gmail.com', '369852', '', 'b:0;', 'charles', 'chan', '', 'address1', '', 'city', '666666', 'Austria', '14', 'Burgenland', '199', '', '', '', '', 'b:0;', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '666666', 'Austria', '14', 'Burgenland', '199', '', '', '', '', 'a:0:{}', 'Flat Shipping Rate', 'flat.flat', '', '20.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-28 14:05:49', '2015-10-28 14:05:49');
+INSERT INTO `oc_order` VALUES ('33', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', '', '', 'gaodihu@126.com', '', '', 's:0:\"\";', '', '', '', '', '', '', '', '', '0', '', '0', '', '', '', '', 's:0:\"\";', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '3995', 'United States', '223', 'District of Columbia', '3628', '', '', '', '', '', 'Flat Shipping Rate', 'flat.flat', '', '20.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8,en;q=0.6', '2015-10-28 18:25:49', '2015-10-28 18:25:49');
+INSERT INTO `oc_order` VALUES ('34', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', '', '', 'gaodihu111@126.com', '', '', 's:0:\"\";', '', '', '', '', '', '', '', '', '0', '', '0', '', '', '', '', 's:0:\"\";', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '235614', 'United Kingdom', '222', 'Argyll and Bute', '3517', '', '', '', '', '', 'Flat Shipping Rate', 'flat.flat', '', '28.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8', '2015-10-29 10:06:24', '2015-10-29 10:06:24');
+INSERT INTO `oc_order` VALUES ('35', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', '', '', 'gaodihu@126.com', '', '', 's:0:\"\";', '', '', '', '', '', '', '', '', '0', '', '0', '', '', '', '', 's:0:\"\";', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '456987', 'Australia', '13', 'New South Wales', '192', '', '', '', '', '', 'Flat Shipping Rate', 'flat.flat', '', '20.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8', '2015-10-29 16:53:46', '2015-10-29 16:53:46');
+INSERT INTO `oc_order` VALUES ('36', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', '', '', 'gaodihu@126.com', '', '', 's:0:\"\";', '', '', '', '', '', '', '', '', '0', '', '0', '', '', '', '', 's:0:\"\";', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '456987', 'GB', '222', 'Ceredigion', '3528', '', '', '', '', '', 'Flat Shipping Rate', 'flat.flat', '', '28.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8', '2015-10-29 17:04:51', '2015-10-29 17:04:51');
+INSERT INTO `oc_order` VALUES ('37', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu@126.com', '13712546523', '', 's:0:\"\";', '', '', '', '', '', '', '', '', '0', '', '0', '', '', '', '', '', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '456987', 'UG', '219', 'Ntungamo', '3478', '', '', '', '', '', 'Flat Shipping Rate', 'flat.flat', '', '20.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8', '2015-10-29 17:20:47', '2015-10-29 17:20:47');
+INSERT INTO `oc_order` VALUES ('38', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu@126.com', '13712546523', '', 's:0:\"\";', '', '', '', '', '', '', '', '', '0', '', '0', '', '', '', '', '', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '456987', 'Tanzania, United Republic of', '208', 'Dodoma', '3165', 'TZ', 'DO', '13712546523', '', '', 'Flat Shipping Rate', 'flat.flat', '', '20.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8', '2015-10-29 17:30:03', '2015-10-29 17:30:03');
+INSERT INTO `oc_order` VALUES ('39', '0', 'INV-2013-00', '0', 'Pav Clothes', 'http://www.dev2.com/', '0', '1', 'charles', 'chan', 'gaodihu@126.com', '136854', '', 's:0:\"\";', '', '', '', '', '', '', '', '', '0', '', '0', '', '', '', '', '', 'PayPal', 'pp_standard', 'charles', 'chan', '', 'address1', '', 'city', '456987', 'Algeria', '3', 'Annaba', '73', 'DZ', 'ANN', '136854', '', '', 'Flat Shipping Rate', 'flat.flat', '', '20.0000', '0', '0', '0.0000', '0', '', '1', '2', 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36', 'zh-CN,zh;q=0.8', '2015-10-29 17:34:19', '2015-10-29 17:34:19');
 
 -- ----------------------------
 -- Table structure for oc_order_custom_field
@@ -2342,7 +2414,7 @@ CREATE TABLE `oc_order_history` (
   `comment` text NOT NULL,
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`order_history_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_order_history
@@ -2354,6 +2426,7 @@ INSERT INTO `oc_order_history` VALUES ('8', '6', '1', '0', '', '2015-01-10 15:11
 INSERT INTO `oc_order_history` VALUES ('9', '7', '1', '0', '', '2015-01-10 15:38:19');
 INSERT INTO `oc_order_history` VALUES ('10', '8', '1', '0', '', '2015-01-10 16:16:44');
 INSERT INTO `oc_order_history` VALUES ('11', '9', '1', '0', '', '2015-01-12 09:08:58');
+INSERT INTO `oc_order_history` VALUES ('12', '31', '2', '0', '', '2015-10-28 14:04:37');
 
 -- ----------------------------
 -- Table structure for oc_order_option
@@ -2392,7 +2465,7 @@ CREATE TABLE `oc_order_product` (
   `tax` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `reward` int(8) NOT NULL,
   PRIMARY KEY (`order_product_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=60 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_order_product
@@ -2424,6 +2497,32 @@ INSERT INTO `oc_order_product` VALUES ('30', '11', '40', 'Crossed Shirt - Beluga
 INSERT INTO `oc_order_product` VALUES ('31', '12', '40', 'Crossed Shirt - Belugas', 'product 11', '1', '15.0000', '15.0000', '0.0000', '0');
 INSERT INTO `oc_order_product` VALUES ('32', '13', '40', 'Crossed Shirt - Belugas', 'product 11', '5', '15.0000', '75.0000', '0.0000', '0');
 INSERT INTO `oc_order_product` VALUES ('33', '13', '45', 'Farlap Shirt - Ruby Wine', 'Product 13', '3', '2000.0000', '6000.0000', '0.0000', '2400');
+INSERT INTO `oc_order_product` VALUES ('34', '14', '40', 'Crossed Shirt - Belugas', 'product 11', '2', '15.0000', '30.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('35', '15', '40', 'Crossed Shirt - Belugas', 'product 11', '2', '15.0000', '30.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('36', '16', '40', 'Crossed Shirt - Belugas', 'product 11', '2', '15.0000', '30.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('37', '17', '40', 'Crossed Shirt - Belugas', 'product 11', '2', '15.0000', '30.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('38', '18', '40', 'Crossed Shirt - Belugas', 'product 11', '2', '15.0000', '30.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('39', '19', '40', 'Crossed Shirt - Belugas', 'product 11', '2', '15.0000', '30.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('40', '20', '40', 'Crossed Shirt - Belugas', 'product 11', '2', '15.0000', '30.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('41', '21', '40', 'Crossed Shirt - Belugas', 'product 11', '2', '15.0000', '30.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('42', '22', '40', 'Crossed Shirt - Belugas', 'product 11', '2', '15.0000', '30.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('43', '23', '40', 'Crossed Shirt - Belugas', 'product 11', '2', '15.0000', '30.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('44', '24', '40', 'Crossed Shirt - Belugas', 'product 11', '2', '15.0000', '30.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('45', '25', '40', 'Crossed Shirt - Belugas', 'product 11', '2', '15.0000', '30.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('46', '26', '40', 'Crossed Shirt - Belugas', 'product 11', '2', '15.0000', '30.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('47', '27', '40', 'Crossed Shirt - Belugas', 'product 11', '2', '15.0000', '30.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('48', '28', '40', 'Crossed Shirt - Belugas', 'product 11', '2', '15.0000', '30.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('49', '29', '40', 'Crossed Shirt - Belugas', 'product 11', '2', '15.0000', '30.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('50', '30', '40', 'Crossed Shirt - Belugas', 'product 11', '2', '15.0000', '30.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('51', '31', '40', 'Crossed Shirt - Belugas', 'product 11', '1', '15.0000', '15.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('52', '32', '40', 'Crossed Shirt - Belugas', 'product 11', '1', '15.0000', '15.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('53', '33', '40', 'Crossed Shirt - Belugas', 'product 11', '1', '15.0000', '15.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('54', '34', '40', 'Crossed Shirt - Belugas', 'product 11', '1', '15.0000', '15.0000', '5.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('55', '35', '40', 'Crossed Shirt - Belugas', 'product 11', '1', '15.0000', '15.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('56', '36', '40', 'Crossed Shirt - Belugas', 'product 11', '1', '15.0000', '15.0000', '5.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('57', '37', '40', 'Crossed Shirt - Belugas', 'product 11', '1', '15.0000', '15.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('58', '38', '40', 'Crossed Shirt - Belugas', 'product 11', '1', '15.0000', '15.0000', '0.0000', '0');
+INSERT INTO `oc_order_product` VALUES ('59', '39', '40', 'Crossed Shirt - Belugas', 'product 11', '1', '15.0000', '15.0000', '0.0000', '0');
 
 -- ----------------------------
 -- Table structure for oc_order_recurring
@@ -2531,7 +2630,7 @@ CREATE TABLE `oc_order_total` (
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`order_total_id`),
   KEY `order_id` (`order_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=132 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_order_total
@@ -2579,6 +2678,88 @@ INSERT INTO `oc_order_total` VALUES ('46', '12', 'total', 'Total', '20.0000', '9
 INSERT INTO `oc_order_total` VALUES ('47', '13', 'sub_total', 'Sub-Total', '6075.0000', '1');
 INSERT INTO `oc_order_total` VALUES ('48', '13', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
 INSERT INTO `oc_order_total` VALUES ('49', '13', 'total', 'Total', '6080.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('50', '14', 'sub_total', 'Sub-Total', '30.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('51', '14', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('52', '14', 'total', 'Total', '35.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('53', '15', 'sub_total', 'Sub-Total', '30.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('54', '15', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('55', '15', 'total', 'Total', '35.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('56', '16', 'sub_total', 'Sub-Total', '30.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('57', '16', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('58', '16', 'total', 'Total', '35.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('59', '17', 'sub_total', 'Sub-Total', '30.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('60', '17', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('61', '17', 'total', 'Total', '35.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('62', '18', 'sub_total', 'Sub-Total', '30.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('63', '18', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('64', '18', 'total', 'Total', '35.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('65', '19', 'sub_total', 'Sub-Total', '30.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('66', '19', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('67', '19', 'total', 'Total', '35.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('68', '20', 'sub_total', 'Sub-Total', '30.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('69', '20', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('70', '20', 'total', 'Total', '35.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('71', '21', 'sub_total', 'Sub-Total', '30.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('72', '21', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('73', '21', 'total', 'Total', '35.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('74', '22', 'sub_total', 'Sub-Total', '30.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('75', '22', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('76', '22', 'total', 'Total', '35.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('77', '23', 'sub_total', 'Sub-Total', '30.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('78', '23', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('79', '23', 'total', 'Total', '35.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('80', '24', 'sub_total', 'Sub-Total', '30.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('81', '24', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('82', '24', 'total', 'Total', '35.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('83', '25', 'sub_total', 'Sub-Total', '30.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('84', '25', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('85', '25', 'total', 'Total', '35.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('86', '26', 'sub_total', 'Sub-Total', '30.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('87', '26', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('88', '26', 'total', 'Total', '35.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('89', '27', 'sub_total', 'Sub-Total', '30.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('90', '27', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('91', '27', 'total', 'Total', '35.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('92', '28', 'sub_total', 'Sub-Total', '30.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('93', '28', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('94', '28', 'total', 'Total', '35.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('95', '29', 'sub_total', 'Sub-Total', '30.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('96', '29', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('97', '29', 'total', 'Total', '35.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('98', '30', 'sub_total', 'Sub-Total', '30.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('99', '30', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('100', '30', 'total', 'Total', '35.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('101', '31', 'sub_total', 'Sub-Total', '15.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('102', '31', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('103', '31', 'total', 'Total', '20.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('104', '32', 'sub_total', 'Sub-Total', '15.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('105', '32', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('106', '32', 'total', 'Total', '20.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('107', '33', 'sub_total', 'Sub-Total', '15.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('108', '33', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('109', '33', 'total', 'Total', '20.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('110', '34', 'sub_total', 'Sub-Total', '15.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('111', '34', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('112', '34', 'tax', 'Eco Tax (-2.00)', '4.0000', '5');
+INSERT INTO `oc_order_total` VALUES ('113', '34', 'tax', 'VAT (20%)', '4.0000', '5');
+INSERT INTO `oc_order_total` VALUES ('114', '34', 'total', 'Total', '28.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('115', '35', 'sub_total', 'Sub-Total', '15.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('116', '35', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('117', '35', 'total', 'Total', '20.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('118', '36', 'sub_total', 'Sub-Total', '15.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('119', '36', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('120', '36', 'tax', 'Eco Tax (-2.00)', '4.0000', '5');
+INSERT INTO `oc_order_total` VALUES ('121', '36', 'tax', 'VAT (20%)', '4.0000', '5');
+INSERT INTO `oc_order_total` VALUES ('122', '36', 'total', 'Total', '28.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('123', '37', 'sub_total', 'Sub-Total', '15.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('124', '37', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('125', '37', 'total', 'Total', '20.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('126', '38', 'sub_total', 'Sub-Total', '15.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('127', '38', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('128', '38', 'total', 'Total', '20.0000', '9');
+INSERT INTO `oc_order_total` VALUES ('129', '39', 'sub_total', 'Sub-Total', '15.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('130', '39', 'shipping', 'Flat Shipping Rate', '5.0000', '3');
+INSERT INTO `oc_order_total` VALUES ('131', '39', 'total', 'Total', '20.0000', '9');
 
 -- ----------------------------
 -- Table structure for oc_order_voucher
@@ -3045,9 +3226,9 @@ INSERT INTO `oc_product` VALUES ('33', 'Product 6', '', '', '', '', '', '', '', 
 INSERT INTO `oc_product` VALUES ('34', 'Product 7', '', '', '', '', '', '', '', '997', '6', 'catalog/demo/test.jpg', '8', '1', '130.0000', '0', '9', '2014-10-22', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '1', '2009-02-03 18:07:54', '2014-12-31 11:15:15');
 INSERT INTO `oc_product` VALUES ('35', 'Product 8', '', '', '', '', '', '', '', '1000', '5', 'catalog/demo/test.jpg', '0', '0', '100.0000', '0', '9', '2014-10-22', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 18:08:31', '2014-10-23 08:55:21');
 INSERT INTO `oc_product` VALUES ('36', 'Product 9', '', '', '', '', '', '', '', '992', '6', 'catalog/demo/test.jpg', '8', '0', '985.0000', '100', '9', '2014-10-22', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '1', '2009-02-03 18:09:19', '2014-12-16 14:09:50');
-INSERT INTO `oc_product` VALUES ('40', 'product 11', '', '', '', '', '', '', '', '969', '5', 'catalog/demo/test.jpg', '8', '1', '101.0000', '0', '9', '2014-10-22', '10.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '95', '2009-02-03 21:07:12', '2014-12-31 11:14:42');
+INSERT INTO `oc_product` VALUES ('40', 'product 11', '', '', '', '', '', '', '', '968', '5', 'catalog/demo/test.jpg', '8', '1', '101.0000', '0', '9', '2014-10-22', '10.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '103', '2009-02-03 21:07:12', '2014-12-31 11:14:42');
 INSERT INTO `oc_product` VALUES ('41', 'Product 14', '', '', '', '', '', '', '', '975', '5', 'catalog/demo/test.jpg', '8', '1', '99.8800', '0', '9', '2014-10-22', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 21:07:26', '2014-12-31 11:16:00');
-INSERT INTO `oc_product` VALUES ('42', 'Product 15', '', '', '', '', '', '', '', '999', '5', 'catalog/demo/test.jpg', '8', '1', '75.0000', '400', '9', '2014-10-22', '12.50000000', '1', '0.00000000', '2.00000000', '3.00000000', '2', '1', '1', '0', '1', '40', '2009-02-03 21:07:37', '2015-10-13 17:44:43');
+INSERT INTO `oc_product` VALUES ('42', 'Product 15', '', '', '', '', '', '', '', '999', '5', 'catalog/demo/test.jpg', '8', '1', '75.0000', '400', '9', '2014-10-22', '12.50000000', '1', '0.00000000', '2.00000000', '3.00000000', '2', '1', '1', '0', '1', '41', '2009-02-03 21:07:37', '2015-10-13 17:44:43');
 INSERT INTO `oc_product` VALUES ('43', 'Product 16', '', '', '', '', '', '', '', '928', '5', 'catalog/demo/test.jpg', '8', '0', '500.0000', '0', '9', '2014-10-22', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 21:07:49', '2014-12-31 11:17:01');
 INSERT INTO `oc_product` VALUES ('44', 'Product 17', '', '', '', '', '', '', '', '999', '5', 'catalog/demo/test.jpg', '8', '1', '1000.0000', '0', '9', '2014-10-22', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 21:08:00', '2014-10-23 08:53:39');
 INSERT INTO `oc_product` VALUES ('45', 'Product 13', '', '', '', '', '', '', '', '997', '5', 'catalog/demo/test.jpg', '8', '1', '2000.0000', '0', '0', '2014-10-22', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '12', '2009-02-03 21:08:17', '2014-12-31 11:15:28');

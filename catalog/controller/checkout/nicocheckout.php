@@ -115,6 +115,9 @@ class ControllerCheckoutNicoCheckout extends Controller {
 		if (isset($_REQUEST['register']) && !empty($_REQUEST['register']))
 		{ 
 			$json = $this->register_validate($data);
+			var_dump($json);
+			echo "test";
+			die;
 		}
 		else
 		{
@@ -138,7 +141,7 @@ class ControllerCheckoutNicoCheckout extends Controller {
 
 		// Validate if customer is already logged out.
 		if ($this->customer->isLogged()) {
-			//$json['redirect'] = $this->url->link('checkout/nicocheckout', '', 'SSL');
+			$json['redirect'] = $this->url->link('checkout/nicocheckout', '', 'SSL');
 		}
 
 		// Validate cart has products and has stock.
@@ -238,17 +241,24 @@ class ControllerCheckoutNicoCheckout extends Controller {
 
 				if (!$this->customer->isLogged())
 				{
-					if (!isset($this->request->post['fax'])) $this->request->post['fax'] = '';
-					if (!isset($this->request->post['telephone'])) $this->request->post['telephone'] = '';
-					$this->session->data['nicocheckout_customer_id'] = $customer_id = $this->model_account_customer->addCustomer($this->request->post);
+					if (!isset($this->request->post['fax'])) {
+						$this->request->post['fax'] = '';
+					}
+					if (!isset($this->request->post['telephone'])) {
+						$this->request->post['telephone'] = '';
+					}
+					$this->load->model('account/customer');
+					die("test251");
+					$this->session->data['nicocheckout_customer_id'] = $customer_id =$this->model_account_customer->addCustomer($this->request->post);
 					$this->session->data['nicocheckout_customer_id'] = true;
 				}
+			    $customer_group_id = 1;
 
 				$this->load->model('account/customer_group');
 
 				$customer_group = $this->model_account_customer_group->getCustomerGroup($customer_group_id);
 
-
+				die("test260");
 
 			if ($customer_group && !$customer_group['approval']) {
 				$this->customer->login($this->request->post['email'], $this->request->post['password']);
@@ -430,133 +440,6 @@ class ControllerCheckoutNicoCheckout extends Controller {
 
 	}
 
-	public function payment_address_validate(&$data = array())
-	{
-
-		$this->load->language('checkout/nicocheckout');
-
-		$json = array();
-
-		// Validate if customer is logged in.
-		if (!$this->customer->isLogged()) {
-			//$json['redirect'] = $this->url->link('checkout/nicocheckout', '', 'SSL');
-		}
-
-		// Validate cart has products and has stock.
-		if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))) {
-//			$json['redirect'] = $this->url->link('checkout/cart');
-		}
-
-		// Validate minimum quantity requirments.
-		$products = $this->cart->getProducts();
-
-		foreach ($products as $product) {
-			$product_total = 0;
-
-			foreach ($products as $product_2) {
-				if ($product_2['product_id'] == $product['product_id']) {
-					$product_total += $product_2['quantity'];
-				}
-			}
-
-			if ($product['minimum'] > $product_total) {
-				$json['redirect'] = $this->url->link('checkout/cart');
-
-				break;
-			}
-		}
-
-
-				if (!$json)
-				{
-					if (isset($this->request->post['payment_address']) && $this->request->post['payment_address'] == 'existing') {
-						$this->load->model('account/address');
-
-						if (empty($this->request->post['payment_address_id'])) {
-							$json['error']['warning'] = $this->language->get('error_address');
-						} elseif (!in_array($this->request->post['payment_address_id'], array_keys($this->model_account_address->getAddresses()))) {
-							$json['error']['warning'] = $this->language->get('error_address');
-						}
-
-						if (!$json) {
-							// Default Payment Address
-							$this->load->model('account/address');
-
-							$this->session->data['payment_address'] = $this->model_account_address->getAddress($this->request->post['payment_address_id']);
-
-							//unset($this->session->data['payment_method']);
-							//unset($this->session->data['payment_methods']);
-						}
-					} else {
-						if (!isset($this->request->post['firstname']) || ((utf8_strlen(trim($this->request->post['firstname'])) < 1) || (utf8_strlen(trim($this->request->post['firstname'])) > 32))) {
-							$json['error']['firstname'] = $this->language->get('error_firstname');
-						}
-
-						if (!isset($this->request->post['lastname']) || ( (utf8_strlen(trim($this->request->post['lastname'])) < 1) || (utf8_strlen(trim($this->request->post['lastname'])) > 32))) {
-							$json['error']['lastname'] = $this->language->get('error_lastname');
-						}
-
-						if (!isset($this->request->post['address_1']) || ( (utf8_strlen(trim($this->request->post['address_1'])) < 3) || (utf8_strlen(trim($this->request->post['address_1'])) > 128))) {
-							$json['error']['address_1'] = $this->language->get('error_address_1');
-						}
-
-						if (isset($this->request->post['city']) && ( (utf8_strlen($this->request->post['city']) < 2) || (utf8_strlen($this->request->post['city']) > 32))) {
-							$json['error']['city'] = $this->language->get('error_city');
-						}
-
-						$this->load->model('localisation/country');
-
-						if (isset($this->request->post['country_id'])) $country_info = $this->model_localisation_country->getCountry($this->request->post['country_id']);
-
-						if (isset($country_info) && $country_info['postcode_required'] && (utf8_strlen(trim($this->request->post['postcode'])) < 2 || utf8_strlen(trim($this->request->post['postcode'])) > 10)) {
-							$json['error']['postcode'] = $this->language->get('error_postcode');
-						}
-
-						if (isset($this->request->post['country_id']) && empty($this->request->post['country_id'])) {
-							$json['error']['country_id'] = $this->language->get('error_country');
-						}
-
-						if (isset($this->request->post['zone_id']) && ($this->request->post['zone_id'] === '' || $this->request->post['zone_id'] < 0)) {
-							$json['error']['zone_id'] = $this->language->get('error_zone');
-						}
-
-						// Custom field validation
-						$this->load->model('account/custom_field');
-
-						$custom_fields = $this->model_account_custom_field->getCustomFields(array('filter_customer_group_id' => $this->config->get('config_customer_group_id')));
-
-						foreach ($custom_fields as $custom_field) {
-							if (($custom_field['location'] == 'address') && $custom_field['required'] && empty($this->request->post['custom_field'][$custom_field['custom_field_id']])) {
-								$json['error']['custom_field'][$custom_field['custom_field_id']] = sprintf($this->language->get('error_custom_field'), $custom_field['name']);
-							}
-						}
-
-						if (!$json) {
-							// Default Payment Address
-							$this->load->model('account/address');
-
-							$this->request->post = array_merge(array('address_2' => '', 'country_id' => '','zone_id' => '','city' => '','postcode' => ''),$this->request->post);//avoid notices for empty fields
-
-							$address_id = $this->model_account_address->addAddress($this->request->post);
-
-							$this->session->data['payment_address'] = $this->model_account_address->getAddress($address_id);
-
-							//unset($this->session->data['payment_method']);
-							//unset($this->session->data['payment_methods']);
-							/*
-							$activity_data = array(
-								'customer_id' => $this->customer->getId(),
-								'name'        => $this->customer->getFirstName() . ' ' . $this->customer->getLastName()
-							);
-
-							$this->model_account_activity->addActivity('address_add', $activity_data);					*/
-						}
-					}
-				}
-
-		return $json;
-	}
-
 	public function shipping_address_validate(&$data = array()) {
 
 		$this->load->language('checkout/nicocheckout');
@@ -688,7 +571,7 @@ class ControllerCheckoutNicoCheckout extends Controller {
 
 		return $json;
 	}
-	
+
 	public function shipping_method_validate(&$data  = array()) {
 
 		 $this->load->language('checkout/nicocheckout');
@@ -1145,7 +1028,7 @@ class ControllerCheckoutNicoCheckout extends Controller {
 			$this->response->setOutput($this->render());
 		}
   	}
-
+	
 	public function shipping_address($render = true, &$data  = array()) {
 
 		 $this->load->language('checkout/nicocheckout');
@@ -1218,7 +1101,7 @@ class ControllerCheckoutNicoCheckout extends Controller {
 			$this->response->setOutput($this->render());
 		}
   	}
-  	
+
 	public function shipping_method($render = true, &$data = array())
 	{
 
@@ -1421,37 +1304,37 @@ class ControllerCheckoutNicoCheckout extends Controller {
 		}
 
   	}
-
+  	
   	public function payment_method($render = true, &$data = array()) {
 
 		$this->load->language('checkout/nicocheckout');
-		
+
 		$this->load->model('account/address');
-		
+
 		$payment_address = $this->model_account_address->getAddress((isset($this->request->post['payment_address_id']))?$this->request->post['payment_address_id']:0);
-		
-		if (isset($this->request->post['country_id'])) 
+
+		if (isset($this->request->post['country_id']))
 		{
 			$this->session->data['guest']['payment']['country_id'] = $payment_address['country_id'] = $this->request->post['country_id'];
 			$this->session->data['shipping_country_id'] = $this->session->data['payment_country_id'] = $this->session->data['guest']['payment']['payment_country_id'] = $payment_address['payment_country_id'] = $this->request->post['country_id'];
 			if (!isset($this->request->post['zone_id'])) $this->request->post['zone_id'] = '';
 			$this->session->data['shipping_zone_id'] = $this->session->data['payment_zone_id'] = $this->session->data['guest']['payment']['zone_id'] = $payment_address['zone_id'] = $this->request->post['zone_id'];
 		}
-		elseif ($this->customer->isLogged() && isset($this->session->data['payment_address_id'])) 
+		elseif ($this->customer->isLogged() && isset($this->session->data['payment_address_id']))
 		{
-			$payment_address = $this->model_account_address->getAddress($this->session->data['payment_address_id']);		
-		} elseif (isset($this->session->data['guest']['payment'])) 
+			$payment_address = $this->model_account_address->getAddress($this->session->data['payment_address_id']);
+		} elseif (isset($this->session->data['guest']['payment']))
 		{
 			$payment_address = $this->session->data['guest']['payment'];
 		}
-		
+
 		$this->session->data['payment_address'] = $payment_address;
 		if (!isset($this->session->data['payment_zone_id '])) $this->session->data['payment_zone_id '] = $payment_address['zone_id'];
 		$this->tax->setPaymentAddress($payment_address['country_id'], $payment_address['zone_id']);
 
 		//if ($payment_address) {
 			// Totals
-			$total_data = array();					
+			$total_data = array();
 			$total = 0;
 			$taxes = $this->cart->getTaxes();
 
@@ -1459,26 +1342,26 @@ class ControllerCheckoutNicoCheckout extends Controller {
 				$results = $this->model_extension_extension->getExtensions('total');
 
 
-			$sort_order = array(); 
-			
-			
+			$sort_order = array();
+
+
 			foreach ($results as $key => $value) {
 				$sort_order[$key] = $this->config->get($value['code'] . '_sort_order');
 			}
-			
+
 			array_multisort($sort_order, SORT_ASC, $results);
-			
+
 			foreach ($results as $result) {
 				if ($this->config->get($result['code'] . '_status')) {
 					$this->load->model('total/' . $result['code']);
-		
+
 					$this->{'model_total_' . $result['code']}->getTotal($total_data, $total, $taxes);
 				}
 			}
-			
+
 			// Payment Methods
 			$method_data = array();
-			
+
 
 				$this->load->model('extension/extension');
 				$results = $this->model_extension_extension->getExtensions('payment');
@@ -1490,11 +1373,11 @@ class ControllerCheckoutNicoCheckout extends Controller {
 			foreach ($results as $result) {
 				if ($this->config->get($result['code'] . '_status')) {
 					$this->load->model('payment/' . $result['code']);
-					
 
-				    $method = $this->{'model_payment_' . $result['code']}->getMethod($payment_address, $total); 
 
-					
+				    $method = $this->{'model_payment_' . $result['code']}->getMethod($payment_address, $total);
+
+
 					if ($method) {
                         if($cart_has_recurring > 0){
                             if (method_exists($this->{'model_payment_' . $result['code']},'recurringPayments')) {
@@ -1509,52 +1392,52 @@ class ControllerCheckoutNicoCheckout extends Controller {
 				}
 			}
 
-			$sort_order = array(); 
-		  
+			$sort_order = array();
+
 			foreach ($method_data as $key => $value) {
 				$sort_order[$key] = $value['sort_order'];
 			}
-	
-			array_multisort($sort_order, SORT_ASC, $method_data);			
-			
-			$this->session->data['payment_methods'] = $method_data;	
-			
-		//}			
-		
+
+			array_multisort($sort_order, SORT_ASC, $method_data);
+
+			$this->session->data['payment_methods'] = $method_data;
+
+		//}
+
 		$data['text_payment_method'] = $this->language->get('text_payment_method');
 		$data['text_comments'] = $this->language->get('text_comments');
 
 		$data['button_continue'] = $this->language->get('button_continue');
-   
+
 		if (empty($this->session->data['payment_methods'])) {
 			$data['error_warning'] = sprintf($this->language->get('error_no_payment'), $this->url->link('information/contact'));
 		} else {
 			$data['error_warning'] = '';
-		}	
+		}
 
 		if (isset($this->session->data['payment_methods'])) {
-			$data['payment_methods'] = $this->session->data['payment_methods']; 
+			$data['payment_methods'] = $this->session->data['payment_methods'];
 		} else {
 			$data['payment_methods'] = array();
 		}
-	  
+
 		if (isset($this->session->data['payment_method']['code'])) {
 			$data['code'] = $this->session->data['payment_method']['code'];
 		} else {
 			$data['code'] = '';
 		}
-		
+
 		if (isset($this->session->data['comment'])) {
 			$data['comment'] = $this->session->data['comment'];
 		} else {
 			$data['comment'] = '';
 		}
-		
+
 		if ($this->config->get('config_checkout_id')) {
 			$this->load->model('catalog/information');
-			
+
 			$information_info = $this->model_catalog_information->getInformation($this->config->get('config_checkout_id'));
-			
+
 			if ($information_info) {
 
 					$data['text_agree'] = sprintf($this->language->get('text_agree'), $this->url->link('information/information/agree', 'information_id=' . $this->config->get('config_checkout_id'), 'SSL'), $information_info['title'], $information_info['title']);
@@ -1565,28 +1448,28 @@ class ControllerCheckoutNicoCheckout extends Controller {
 		} else {
 			$data['text_agree'] = '';
 		}
-		
-		if (isset($this->session->data['agree'])) { 
+
+		if (isset($this->session->data['agree'])) {
 			$data['agree'] = $this->session->data['agree'];
 		} else {
 			$data['agree'] = '';
 		}
-		
+
 		if ($render !== false)
 		{
-			
-			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/nico_payment_method.tpl')) 
+
+			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/nico_payment_method.tpl'))
 			{
 				$template =  $this->template = $this->config->get('config_template') . '/template/checkout/nico_payment_method.tpl';
 			} else {
 				$template =  $this->template = 'default/template/checkout/nico_payment_method.tpl';
 			}
-			
+
 			$this->response->setOutput($this->load->view($template, $data));
 
 		}
   	}
-  	
+
 	public function payment_address($render = true, &$data  = array()) {
 
 		$this->load->language('checkout/nicocheckout');
@@ -1849,35 +1732,12 @@ class ControllerCheckoutNicoCheckout extends Controller {
 			} elseif (isset($this->session->data['guest'])) {
 				$order_data['customer_id'] = 0;
 				$order_data['customer_group_id'] = isset($this->session->data['guest']['customer_group_id'])?$this->session->data['guest']['customer_group_id']:$this->config->get('config_customer_group_id');;
-				$order_data['firstname'] = isset($this->session->data['guest']['firstname'])?$this->session->data['guest']['firstname']:'';
-				$order_data['lastname'] = isset($this->session->data['guest']['lastname'])?$this->session->data['guest']['lastname']:'';
-				$order_data['email'] = isset($this->session->data['guest']['email'])?$this->session->data['guest']['email']:'';
-				$order_data['telephone'] = isset($this->session->data['guest']['telephone'])?$this->session->data['guest']['telephone']:'';
+				$order_data['firstname'] = isset($this->request->post['shipping_firstname'])?$this->request->post['shipping_firstname']:'';
+				$order_data['lastname'] = isset($this->request->post['shipping_lastname'])?$this->request->post['shipping_lastname']:'';
+				$order_data['email'] = isset($this->request->post['shipping_email'])?$this->request->post['shipping_email']:'';
+				$order_data['telephone'] = isset($this->request->post['shipping_telephone'])?$this->request->post['shipping_telephone']:'';
 				$order_data['fax'] = isset($this->session->data['guest']['fax'])?$this->session->data['guest']['fax']:'';
 				$order_data['custom_field'] = isset($this->session->data['guest']['custom_field'])?$this->session->data['guest']['custom_field']:'';
-			}
-
-			if ((isset($payment_address) && is_array($payment_address)) || isset($this->session->data['payment_address']))
-			{
-
-						if (isset($this->session->data['payment_address'])) $payment_address = $this->session->data['payment_address'];
-
-
-					$order_data['payment_firstname'] = $payment_address['firstname'];
-					$order_data['payment_lastname'] = $payment_address['lastname'];
-					$order_data['payment_company'] = $payment_address['company'];
-					$order_data['payment_company_id'] = isset($payment_address['company_id'])?$payment_address['company_id']:'';
-					$order_data['payment_tax_id'] = isset($payment_address['tax_id'])?$payment_address['tax_id']:'';
-					$order_data['payment_address_1'] = $payment_address['address_1'];
-					$order_data['payment_address_2'] = $payment_address['address_2'];
-					$order_data['payment_city'] = $payment_address['city'];
-					$order_data['payment_postcode'] = $payment_address['postcode'];
-					$order_data['payment_zone'] = $payment_address['zone'];
-					$order_data['payment_zone_id'] = $payment_address['zone_id'];
-					$order_data['payment_country'] = $payment_address['country'];
-					$order_data['payment_country_id'] = $payment_address['country_id'];
-					$order_data['payment_address_format'] = $payment_address['address_format'];
-					$order_data['payment_custom_field'] = (isset($payment_address['custom_field']))?$payment_address['custom_field']:'';
 			}
 
 
@@ -1910,21 +1770,28 @@ class ControllerCheckoutNicoCheckout extends Controller {
 					$order_data['shipping_address_format'] = '';//$this->request->post['shipping_address_format'];
 					$order_data['shipping_method'] = $this->request->post['_shipping_method'];
 					$order_data['shipping_code'] = $this->request->post['shipping_method'];
+					$order_data['shipping_telephone'] = $this->request->post['shipping_telephone'];
 
 					$this->load->model('localisation/country');
 					$this->load->model('localisation/zone');
 
 					$order_data['shipping_country'] = '';
+					$order_data['shipping_country_code'] = '';
 					if (isset($this->request->post['shipping_country_id']) && $country_info = $this->model_localisation_country->getCountry($this->request->post['shipping_country_id']))
 					{
 						$order_data['shipping_country'] =  $country_info['name'];//$this->request->post['shipping_country'];
+						$order_data['shipping_country_code'] =  $country_info['iso_code_2'];
 					}
 
 					$order_data['shipping_zone'] = '';
+					$order_data['shipping_zone_code'] = '';
 					if (isset($this->request->post['shipping_zone_id']) && $this->request->post['shipping_zone_id'])
 					{
 						$zone_info = $this->model_localisation_zone->getZone($this->request->post['shipping_zone_id']);
-						if ($zone_info)	$order_data['shipping_zone'] = $zone_info['name'];;//$this->model_localisation_zone->getZone($this->request->post['shipping_zone_id']);
+						if ($zone_info){
+							$order_data['shipping_zone'] = $zone_info['name'];
+							$order_data['shipping_zone_code'] = $zone_info['code'];
+						};//$this->model_localisation_zone->getZone($this->request->post['shipping_zone_id']);
 					}
 				}
 				 else if ($this->customer->isLogged() && (isset($this->request->post['shipping_address_id']) || isset($this->session->data['shipping_address_id'])))
@@ -1949,23 +1816,49 @@ class ControllerCheckoutNicoCheckout extends Controller {
 					$order_data['shipping_country_id'] = $this->session->data['shipping_address']['country_id'];
 					$order_data['shipping_address_format'] = $this->session->data['shipping_address']['address_format'];
 					$order_data['shipping_custom_field'] = (isset($this->session->data['shipping_address']['custom_field']) ? $this->session->data['shipping_address']['custom_field'] : array());
+					$order_data['shipping_country_code'] =  $this->session->data['shipping_address']['iso_code_2'];
+					$order_data['shipping_zone_code'] =  $this->session->data['shipping_address']['zone_code'];
+					$order_data['shipping_telephone'] =  $this->session->data['shipping_address']['telephone'];
 				} else
 				{
-					$order_data['shipping_firstname'] = isset($this->request->post['firstname'])?$this->request->post['firstname']:isset($order_data['payment_firstname'])?$order_data['payment_firstname']:'';
-					$order_data['shipping_lastname'] = isset($this->request->post['lastname'])?$this->request->post['lastname']:isset($order_data['payment_lastname'])?$order_data['payment_lastname']:'';
-					$order_data['shipping_company'] = isset($this->request->post['company'])?$this->request->post['company']:isset($order_data['payment_company'])?$order_data['payment_company']:'';
-					$order_data['shipping_address_1'] = isset($this->request->post['address_1'])?$this->request->post['address_1']:isset($order_data['payment_address_1'])?$order_data['payment_address_1']:'';
-					$order_data['shipping_address_2'] = isset($this->request->post['address_2'])?$this->request->post['address_2']:isset($order_data['payment_address_2'])?$order_data['payment_address_2']:'';
-					$order_data['shipping_city'] = isset($this->request->post['city'])?$this->request->post['city']:isset($order_data['payment_city'])?$order_data['payment_city']:'';
-					$order_data['shipping_postcode'] = isset($this->request->post['postcode'])?$this->request->post['postcode']:isset($order_data['payment_postcode'])?$order_data['payment_postcode']:'';
-					$order_data['shipping_zone'] = isset($this->request->post['zone'])?$this->request->post['zone']:isset($order_data['payment_zone'])?$order_data['payment_zone']:'';
-					$order_data['shipping_zone_id'] = isset($this->request->post['zone_id'])?$this->request->post['zone_id']:isset($order_data['payment_zone_id'])?$order_data['payment_zone_id']:'';
-					$order_data['shipping_country'] = isset($this->request->post['country'])?$this->request->post['country']:isset($order_data['payment_country'])?$order_data['payment_country']:'';
-					$order_data['shipping_country_id'] = isset($this->request->post['country_id'])?$this->request->post['country_id']:isset($order_data['payment_country_id'])?$order_data['payment_country_id']:'';
-					$order_data['shipping_address_format'] = isset($this->request->post['address_format'])?$this->request->post['address_format']:isset($order_data['payment_address_format'])?$order_data['payment_address_format']:'';
-					$order_data['shipping_custom_field'] = array();
-					$order_data['shipping_method'] = isset($this->request->post['method'])?$this->request->post['method']:isset($order_data['payment_method'])?$order_data['payment_method']:'';
-					$order_data['shipping_code'] = isset($this->request->post['code'])?$this->request->post['code']:isset($order_data['payment_code'])?$order_data['payment_code']:'';
+					$order_data['shipping_firstname'] = $this->request->post['shipping_firstname'];
+					$order_data['shipping_lastname'] = $this->request->post['shipping_lastname'];
+					$order_data['shipping_company'] = $this->request->post['shipping_company'];
+					$order_data['shipping_address_1'] = $this->request->post['shipping_address_1'];
+					$order_data['shipping_address_2'] = $this->request->post['shipping_address_2'];
+					$order_data['shipping_city'] = $this->request->post['shipping_city'];
+					$order_data['shipping_postcode'] = $this->request->post['shipping_postcode'];
+					$order_data['shipping_zone'] = '';//$this->request->post['shipping_zone'];
+					$order_data['shipping_zone_id'] = $this->request->post['shipping_zone_id'];
+					$order_data['shipping_country'] = '';//$this->request->post['shipping_country'];
+					$order_data['shipping_country_id'] = $this->request->post['shipping_country_id'];
+					$order_data['shipping_address_format'] = '';//$this->request->post['shipping_address_format'];
+					$order_data['shipping_method'] = $this->request->post['_shipping_method'];
+					$order_data['shipping_code'] = $this->request->post['shipping_method'];
+					$order_data['shipping_telephone'] = $this->request->post['shipping_telephone'];
+
+
+					$this->load->model('localisation/country');
+					$this->load->model('localisation/zone');
+
+					$order_data['shipping_country'] = '';
+					$order_data['shipping_country_code'] = '';
+					if (isset($this->request->post['shipping_country_id']) && $country_info = $this->model_localisation_country->getCountry($this->request->post['shipping_country_id']))
+					{
+						$order_data['shipping_country'] =  $country_info['name'];//$this->request->post['shipping_country'];
+						$order_data['shipping_country_code'] =  $country_info['iso_code_2'];
+					}
+
+					$order_data['shipping_zone'] = '';
+					$order_data['shipping_zone_code'] = '';
+					if (isset($this->request->post['shipping_zone_id']) && $this->request->post['shipping_zone_id'])
+					{
+						$zone_info = $this->model_localisation_zone->getZone($this->request->post['shipping_zone_id']);
+						if ($zone_info){
+							$order_data['shipping_zone'] = $zone_info['name'];
+							$order_data['shipping_zone_code'] = $zone_info['code'];
+						};//$this->model_localisation_zone->getZone($this->request->post['shipping_zone_id']);
+					}
 				}
 
 				if (isset($this->session->data['shipping_method']['title'])) {
@@ -1995,6 +1888,10 @@ class ControllerCheckoutNicoCheckout extends Controller {
 				$order_data['shipping_custom_field'] = array();
 				$order_data['shipping_method'] = '';
 				$order_data['shipping_code'] = '';
+				$order_data['shipping_country_code'] = '';
+				$order_data['shipping_zone_code'] = '';
+				$order_data['shipping_telephone'] = '';
+
 			}
 
 			$order_data['products'] = array();
@@ -2214,6 +2111,133 @@ class ControllerCheckoutNicoCheckout extends Controller {
 		}
 
   	}
+  	
+	public function payment_address_validate(&$data = array())
+	{
+
+		$this->load->language('checkout/nicocheckout');
+
+		$json = array();
+
+		// Validate if customer is logged in.
+		if (!$this->customer->isLogged()) {
+			//$json['redirect'] = $this->url->link('checkout/nicocheckout', '', 'SSL');
+		}
+
+		// Validate cart has products and has stock.
+		if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))) {
+//			$json['redirect'] = $this->url->link('checkout/cart');
+		}
+
+		// Validate minimum quantity requirments.
+		$products = $this->cart->getProducts();
+
+		foreach ($products as $product) {
+			$product_total = 0;
+
+			foreach ($products as $product_2) {
+				if ($product_2['product_id'] == $product['product_id']) {
+					$product_total += $product_2['quantity'];
+				}
+			}
+
+			if ($product['minimum'] > $product_total) {
+				$json['redirect'] = $this->url->link('checkout/cart');
+
+				break;
+			}
+		}
+
+
+				if (!$json)
+				{
+					if (isset($this->request->post['payment_address']) && $this->request->post['payment_address'] == 'existing') {
+						$this->load->model('account/address');
+
+						if (empty($this->request->post['payment_address_id'])) {
+							$json['error']['warning'] = $this->language->get('error_address');
+						} elseif (!in_array($this->request->post['payment_address_id'], array_keys($this->model_account_address->getAddresses()))) {
+							$json['error']['warning'] = $this->language->get('error_address');
+						}
+
+						if (!$json) {
+							// Default Payment Address
+							$this->load->model('account/address');
+
+							$this->session->data['payment_address'] = $this->model_account_address->getAddress($this->request->post['payment_address_id']);
+
+							//unset($this->session->data['payment_method']);
+							//unset($this->session->data['payment_methods']);
+						}
+					} else {
+						if (!isset($this->request->post['firstname']) || ((utf8_strlen(trim($this->request->post['firstname'])) < 1) || (utf8_strlen(trim($this->request->post['firstname'])) > 32))) {
+							$json['error']['firstname'] = $this->language->get('error_firstname');
+						}
+
+						if (!isset($this->request->post['lastname']) || ( (utf8_strlen(trim($this->request->post['lastname'])) < 1) || (utf8_strlen(trim($this->request->post['lastname'])) > 32))) {
+							$json['error']['lastname'] = $this->language->get('error_lastname');
+						}
+
+						if (!isset($this->request->post['address_1']) || ( (utf8_strlen(trim($this->request->post['address_1'])) < 3) || (utf8_strlen(trim($this->request->post['address_1'])) > 128))) {
+							$json['error']['address_1'] = $this->language->get('error_address_1');
+						}
+
+						if (isset($this->request->post['city']) && ( (utf8_strlen($this->request->post['city']) < 2) || (utf8_strlen($this->request->post['city']) > 32))) {
+							$json['error']['city'] = $this->language->get('error_city');
+						}
+
+						$this->load->model('localisation/country');
+
+						if (isset($this->request->post['country_id'])) $country_info = $this->model_localisation_country->getCountry($this->request->post['country_id']);
+
+						if (isset($country_info) && $country_info['postcode_required'] && (utf8_strlen(trim($this->request->post['postcode'])) < 2 || utf8_strlen(trim($this->request->post['postcode'])) > 10)) {
+							$json['error']['postcode'] = $this->language->get('error_postcode');
+						}
+
+						if (isset($this->request->post['country_id']) && empty($this->request->post['country_id'])) {
+							$json['error']['country_id'] = $this->language->get('error_country');
+						}
+
+						if (isset($this->request->post['zone_id']) && ($this->request->post['zone_id'] === '' || $this->request->post['zone_id'] < 0)) {
+							$json['error']['zone_id'] = $this->language->get('error_zone');
+						}
+
+						// Custom field validation
+						$this->load->model('account/custom_field');
+
+						$custom_fields = $this->model_account_custom_field->getCustomFields(array('filter_customer_group_id' => $this->config->get('config_customer_group_id')));
+
+						foreach ($custom_fields as $custom_field) {
+							if (($custom_field['location'] == 'address') && $custom_field['required'] && empty($this->request->post['custom_field'][$custom_field['custom_field_id']])) {
+								$json['error']['custom_field'][$custom_field['custom_field_id']] = sprintf($this->language->get('error_custom_field'), $custom_field['name']);
+							}
+						}
+
+						if (!$json) {
+							// Default Payment Address
+							$this->load->model('account/address');
+
+							$this->request->post = array_merge(array('address_2' => '', 'country_id' => '','zone_id' => '','city' => '','postcode' => ''),$this->request->post);//avoid notices for empty fields
+
+							$address_id = $this->model_account_address->addAddress($this->request->post);
+
+							$this->session->data['payment_address'] = $this->model_account_address->getAddress($address_id);
+
+							//unset($this->session->data['payment_method']);
+							//unset($this->session->data['payment_methods']);
+							/*
+							$activity_data = array(
+								'customer_id' => $this->customer->getId(),
+								'name'        => $this->customer->getFirstName() . ' ' . $this->customer->getLastName()
+							);
+
+							$this->model_account_activity->addActivity('address_add', $activity_data);					*/
+						}
+					}
+				}
+
+		return $json;
+	}
 	  	
 	public function country($data = array()) {
 		$json = array();
