@@ -136,7 +136,7 @@ echo $header;
                                 <?php if (!isset($customer_id)) {?>
                                 <div class="form-group required col-md-12">
                                 <!--<label class="control-label" for="input-shipping-email"><?php echo $entry_email; ?></label>-->
-                                <input type="text" name="shipping_email" value="" placeholder="<?php echo str_replace(':','',$entry_email); ?>" id="input-shipping-email" class="form-control" />
+                                <input type="text" name="email" value="" placeholder="<?php echo str_replace(':','',$entry_email); ?>" id="input-email" class="form-control" />
                                 </div>
                                 <?php } ?>
                                 <div class=" form-group col-md-12">
