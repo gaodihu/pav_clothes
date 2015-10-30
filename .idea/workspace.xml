@@ -34,15 +34,14 @@
       <file leaf-file-name="nicocheckout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/controller/checkout/nicocheckout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.0930233">
-              <caret line="2064" column="84" selection-start-line="2064" selection-start-column="76" selection-end-line="2064" selection-end-column="84" />
+            <state vertical-scroll-proportion="-3.3372092">
+              <caret line="119" column="9" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
               <folding>
-                <element signature="n#cart#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
-                <marker date="1446199712789" expanded="true" signature="136:221" placeholder="DELETE FROM ..." />
-                <marker date="1446199712789" expanded="true" signature="245:337" placeholder="DELETE FROM ..." />
-                <marker date="1446199712789" expanded="true" signature="361:458" placeholder="DELETE FROM ..." />
-                <marker date="1446199712789" expanded="true" signature="482:570" placeholder="DELETE FROM ..." />
-                <marker date="1446199712789" expanded="true" signature="594:678" placeholder="DELETE FROM ..." />
+                <marker date="1446201008059" expanded="true" signature="136:221" placeholder="DELETE FROM ..." />
+                <marker date="1446201008059" expanded="true" signature="245:337" placeholder="DELETE FROM ..." />
+                <marker date="1446201008059" expanded="true" signature="361:458" placeholder="DELETE FROM ..." />
+                <marker date="1446201008059" expanded="true" signature="482:570" placeholder="DELETE FROM ..." />
+                <marker date="1446201008059" expanded="true" signature="594:678" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
@@ -267,8 +266,8 @@
         <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/nicocheckout.tpl" />
         <option value="$PROJECT_DIR$/catalog/model/account/customer.php" />
         <option value="$PROJECT_DIR$/catalog/model/account/address.php" />
-        <option value="$PROJECT_DIR$/catalog/controller/checkout/nicocheckout.php" />
         <option value="$PROJECT_DIR$/catalog/model/checkout/order.php" />
+        <option value="$PROJECT_DIR$/catalog/controller/checkout/nicocheckout.php" />
       </list>
     </option>
   </component>
@@ -501,7 +500,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5389785" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15101156" sideWeight="0.49462366" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15101156" sideWeight="0.49462366" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17413294" sideWeight="0.5107527" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -934,15 +933,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/controller/checkout/nicocheckout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0930233">
-          <caret line="2064" column="84" selection-start-line="2064" selection-start-column="76" selection-end-line="2064" selection-end-column="84" />
+        <state vertical-scroll-proportion="-3.3372092">
+          <caret line="119" column="9" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
           <folding>
-            <element signature="n#cart#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
-            <marker date="1446199712789" expanded="true" signature="136:221" placeholder="DELETE FROM ..." />
-            <marker date="1446199712789" expanded="true" signature="245:337" placeholder="DELETE FROM ..." />
-            <marker date="1446199712789" expanded="true" signature="361:458" placeholder="DELETE FROM ..." />
-            <marker date="1446199712789" expanded="true" signature="482:570" placeholder="DELETE FROM ..." />
-            <marker date="1446199712789" expanded="true" signature="594:678" placeholder="DELETE FROM ..." />
+            <marker date="1446201008059" expanded="true" signature="136:221" placeholder="DELETE FROM ..." />
+            <marker date="1446201008059" expanded="true" signature="245:337" placeholder="DELETE FROM ..." />
+            <marker date="1446201008059" expanded="true" signature="361:458" placeholder="DELETE FROM ..." />
+            <marker date="1446201008059" expanded="true" signature="482:570" placeholder="DELETE FROM ..." />
+            <marker date="1446201008059" expanded="true" signature="594:678" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>

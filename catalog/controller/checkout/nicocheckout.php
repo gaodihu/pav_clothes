@@ -1824,6 +1824,10 @@ class ControllerCheckoutNicoCheckout extends Controller {
 					$order_data['shipping_code'] = $this->request->post['shipping_method'];
 					$order_data['shipping_telephone'] = $this->request->post['shipping_telephone'];
 
+					$order_data['telephone'] = $this->request->post['shipping_telephone'];
+					$order_data['firstname'] = $this->request->post['shipping_firstname'];
+					$order_data['lastname'] = $this->request->post['shipping_lastname'];
+
 					$this->load->model('localisation/country');
 					$this->load->model('localisation/zone');
 
@@ -1871,6 +1875,9 @@ class ControllerCheckoutNicoCheckout extends Controller {
 					$order_data['shipping_country_code'] =  $this->session->data['shipping_address']['iso_code_2'];
 					$order_data['shipping_zone_code'] =  $this->session->data['shipping_address']['zone_code'];
 					$order_data['shipping_telephone'] =  $this->session->data['shipping_address']['telephone'];
+					$order_data['telephone'] = $this->session->data['shipping_address']['shipping_telephone'];
+					$order_data['firstname'] = $this->session->data['shipping_address']['shipping_firstname'];
+					$order_data['lastname'] = $this->session->data['shipping_address']['shipping_lastname'];
 				} else
 				{
 					$order_data['shipping_firstname'] = $this->request->post['shipping_firstname'];
@@ -1888,6 +1895,9 @@ class ControllerCheckoutNicoCheckout extends Controller {
 					$order_data['shipping_method'] = $this->request->post['_shipping_method'];
 					$order_data['shipping_code'] = $this->request->post['shipping_method'];
 					$order_data['shipping_telephone'] = $this->request->post['shipping_telephone'];
+					$order_data['telephone'] = $this->request->post['shipping_telephone'];
+					$order_data['firstname'] = $this->request->post['shipping_firstname'];
+					$order_data['lastname'] = $this->request->post['shipping_lastname'];
 
 
 					$this->load->model('localisation/country');
