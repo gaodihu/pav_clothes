@@ -38,19 +38,9 @@ echo $header;
 	}
 
 </style>
-<div class="container nicocheckout">        
-		<div class="row">
-		    <div class="col-md-12">
-			    <div class="breadcrumbs">
-				  <ul class="breadcrumb">
-					<?php foreach ($breadcrumbs as $breadcrumb) { ?>
-					<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-					<?php } ?>
-				  </ul>
-				</div>
-			</div>
-			
-		</div>
+<div class="container nicocheckout">
+    <?php require( PAVO_THEME_DIR."/template/common/breadcrumb.tpl" );  ?>
+
 		
 		<div class="error"></div>
 
@@ -60,30 +50,49 @@ echo $header;
 		<div class="row">
 			<div class="col-md-12">
 
-			    <h2><?php echo $heading_title; ?></h2>
-			    <p class="well"><?php echo $text_returning_customer; ?> &nbsp;<a href="#" onclick="jQuery('.login-form').toggle();return false;"><?php echo $text_i_am_returning_customer; ?></a></p>
-			    
-			    <div class="login-form registerbox clearfix" style="display:none">
-				<div class="row">
-				<div class="col-md-12 message"></div>
-				<form class="form-inline" role="form">
-			        <div class="col-md-8">
-				<div class="form-group">
-				  <label class="control-label" for="input-email"><?php echo $entry_email; ?></label>
-				  <input type="text" name="email" value="" placeholder="<?php echo str_replace(':','',$entry_email); ?>" id="input-email" class="form-control" />
-				</div>
-				<div class="form-group">
-				  <label class="control-label" for="input-password"><?php echo $entry_password; ?></label>
-				  <input type="password" name="password" value="" placeholder="<?php echo str_replace(':','',$entry_password); ?>" id="input-password" class="form-control" />
-				</div>
-				</div>
-				<div class="form-group col-md-4">
-				    <input type="button" value="<?php echo $button_login; ?>" id="button-login" data-loading-text="<?php if (isset($text_loading)) echo $text_loading;else echo 'loading ...' ?>" class="btn btn-primary" />
-				    <a href="<?php echo $forgotten; ?>"><?php echo $text_forgotten; ?></a>
-				</div>
-			      </form>
-			    </div>
-			</div>
+			    <!--<div class="pull-left check-title"><h2 ><?php echo $heading_title; ?></h2></div>-->
+			    <a href="#"  class="button check-login" data-toggle="modal" data-target="#mylogin"><?php echo $text_i_am_returning_customer; ?></a>
+
+		<!-- Modal -->
+		<div class="modal fade" id="mylogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+		<div class="modal-content">
+		<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<h4 class="modal-title" id="myModalLabel">Login</h4>
+		</div>
+		<div class="modal-body">
+
+
+
+
+		<form class="form-inline" role="form">
+
+
+		<label class="control-label" for="input-email"><?php echo $entry_email; ?></label>
+		<input type="text" name="email" value="" placeholder="<?php echo str_replace(':','',$entry_email); ?>" id="input-email" class="form-control" />
+
+
+		<label class="control-label" for="input-password"><?php echo $entry_password; ?></label>
+		<input type="password" name="password" value="" placeholder="<?php echo str_replace(':','',$entry_password); ?>" id="input-password" class="form-control" />
+		<a href="<?php echo $forgotten; ?>"><?php echo $text_forgotten; ?></a>
+		
+
+
+		</form>
+
+		</div>
+		<div class="modal-footer">
+
+		<input type="button" class="btn btn-primary" data-loading-text="<?php if (isset($text_loading)) echo $text_loading;else echo 'loading ...' ?>" value="<?php echo $button_login; ?>"></input>
+		</div>
+		</div>
+		</div>
+		</div>
+
+
+
+
 		    </div>
 		</div>
 		<?php }?>
@@ -144,13 +153,13 @@ echo $header;
                                 <div class=" required col-md-6">
                                     <!--<label class="control-label" for="input-shipping-firstname"><?php echo $entry_firstname; ?></label>-->
 
-                                        <input type="text" name="shipping_firstname" value="" placeholder="<?php echo str_replace(':','',$entry_firstname); ?>" id="input-shipping-firstname" class="form-control" />
+                                        <input type="text" name="shipping_firstname" value="<?php if (isset($shipping_firstname)) echo $shipping_firstname;?>" placeholder="<?php echo str_replace(':','',$entry_firstname); ?>" id="input-shipping-firstname" class="form-control" />
 
                                 </div>
                                 <div class=" required col-md-6">
                                     <!--<label class="control-label" for="input-shipping-lastname"><?php echo $entry_lastname; ?></label>-->
 
-                                        <input type="text" name="shipping_lastname" value="" placeholder="<?php echo str_replace(':','',$entry_lastname); ?>" id="input-shipping-lastname" class="form-control" />
+                                        <input type="text" name="shipping_lastname" value="<?php if (isset($shipping_lastname)) echo $shipping_lastname;?>" placeholder="<?php echo str_replace(':','',$entry_lastname); ?>" id="input-shipping-lastname" class="form-control" />
 
                                 </div>
 
@@ -169,7 +178,7 @@ echo $header;
                                 <div class="form-group required col-md-12">
                                     <!--<label class="control-label" for="input-shipping-address-1"><?php echo $entry_address_1; ?></label>-->
 
-                                        <input type="text" name="shipping_address_1" value="" placeholder="<?php echo str_replace(':','',$entry_address_1); ?>" id="input-shipping-address-1" class="form-control" />
+                                        <input type="text" name="shipping_address_1" value="<?php if (isset($shipping_address_1)) echo $shipping_address_1;?>" placeholder="<?php echo str_replace(':','',$entry_address_1); ?>" id="input-shipping-address-1" class="form-control" />
 
                                 </div>
 
@@ -177,7 +186,7 @@ echo $header;
                                 <div class="form-group col-md-12">
                                 <!--<label class="control-label" for="input-shipping-address-2"><?php echo $entry_address_2; ?></label>-->
 
-                                <input type="text" name="shipping_address_2" value="" placeholder="<?php echo str_replace(':','',$entry_address_2); ?>" id="input-shipping-address-2" class="form-control" />
+                                <input type="text" name="shipping_address_2" value="<?php if (isset($shipping_address_2)) echo $shipping_address_2;?>" placeholder="<?php echo str_replace(':','',$entry_address_2); ?>" id="input-shipping-address-2" class="form-control" />
 
                                 </div>
 
@@ -192,7 +201,7 @@ echo $header;
                                 <div class="required col-md-6">
                                 <!--<label class="control-label" for="input-shipping-city"><?php echo $entry_city; ?></label>-->
 
-                                <input type="text" name="shipping_city" value="" placeholder="<?php echo str_replace(':','',$entry_city); ?>" id="input-shipping-city" class="form-control" />
+                                <input type="text" name="shipping_city" value="<?php if (isset($shipping_city)) echo $shipping_city;?>" placeholder="<?php echo str_replace(':','',$entry_city); ?>" id="input-shipping-city" class="form-control" />
 
                                 </div>
 
@@ -201,7 +210,7 @@ echo $header;
                                 <div class="required col-md-6">
                                 <!--<label class="control-label" for="input-shipping-postcode"><?php echo $entry_postcode; ?></label>-->
 
-                                <input type="text" name="shipping_postcode" value="<?php echo $postcode; ?>" placeholder="<?php echo str_replace(':','',$entry_postcode); ?>" id="input-shipping-postcode" class="form-control" />
+                                <input type="text" name="shipping_postcode" value="<?php if (isset($shipping_postcode)) echo $shipping_postcode;?>" placeholder="<?php echo str_replace(':','',$entry_postcode); ?>" id="input-shipping-postcode" class="form-control" />
 
                                 </div>
 
@@ -214,7 +223,7 @@ echo $header;
                                 <select name="shipping_country_id" id="input-shipping-country" class="form-control">
                                 <option value=""><?php echo $text_select; ?></option>
                                 <?php foreach ($countries as $country) { ?>
-                                <?php if ($country['country_id'] == $country_id) { ?>
+                                <?php if ($country['country_id'] == $shipping_country_id) { ?>
                                 <option value="<?php echo $country['country_id']; ?>" selected="selected"><?php echo $country['name']; ?></option>
                                 <?php } else { ?>
                                 <option value="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
