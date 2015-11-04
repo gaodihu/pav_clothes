@@ -121,7 +121,8 @@
                                </div></div></div>
 
 
-                       <div class="pull-right"><a href="<?php echo $checkout; ?>" class="button btn-primary btn-lg" style="background-color:#f59a3a;padding: 15px 30px 15px 30px;font-size: 18px;"><?php echo $button_checkout; ?></a></div>
+
+                       <div class="pull-right"><a href="/index.php?route=payment/pp_express/start"  ><img width="150" src="catalog/view/theme/pav_clothes/image/paypal_express_mobile.png"> or <a href="<?php echo $checkout; ?>" class="button btn-primary btn-lg" style="background-color:#f59a3a;padding: 12px 50px 12px 50px;font-size: 18px;font-weight: bold"><?php echo $button_checkout; ?></a></div>
 
                </div>
            </div>

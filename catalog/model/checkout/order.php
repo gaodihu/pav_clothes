@@ -864,4 +864,76 @@ class ModelCheckoutOrder extends Model {
 
 		$this->event->trigger('post.order.history.add', $order_id);
 	}
+
+
+
+	public function getOrderProducts($order_id) {
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order_product WHERE order_id = '" . (int) $order_id . "'");
+
+		return $query->rows;
+	}
+
+	public function getOrderTotal($order_id) {
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order_total WHERE order_id = '" . (int) $order_id . "'");
+		return $query->rows;
+	}
+	public function update($order_id, $order_status_id, $comment = '', $notify = false) {
+		$order_info = $this->getOrder($order_id);
+
+		if ($order_info && $order_info['order_status_id']) {
+			// Fraud Detection
+			if ($this->config->get('config_fraud_detection')) {
+				$this->load->model('checkout/fraud');
+
+				$risk_score = $this->model_checkout_fraud->getFraudScore($order_info);
+
+				if ($risk_score > $this->config->get('config_fraud_score')) {
+					$order_status_id = $this->config->get('config_fraud_status_id');
+				}
+			}
+
+			// Ban IP
+			$status = false;
+
+			$this->load->model('account/customer');
+
+			if ($order_info['customer_id']) {
+
+				$results = $this->model_account_customer->getIps($order_info['customer_id']);
+
+				foreach ($results as $result) {
+					if ($this->model_account_customer->isBanIp($result['ip'])) {
+						$status = true;
+
+						break;
+					}
+				}
+			} else {
+				$status = $this->model_account_customer->isBanIp($order_info['ip']);
+			}
+
+			if ($status) {
+				$order_status_id = $this->config->get('config_order_status_id');
+			}
+
+			$this->db->query("UPDATE `" . DB_PREFIX . "order` SET order_status_id = '" . (int) $order_status_id . "', date_modified = NOW() WHERE order_id = '" . (int) $order_id . "'");
+
+			$this->db->query("INSERT INTO " . DB_PREFIX . "order_history SET order_id = '" . (int) $order_id . "', order_status_id = '" . (int) $order_status_id . "', notify = '" . (int) $notify . "', comment = '" . $this->db->escape($comment) . "', date_added = NOW()");
+			if ($order_status_id == 5) {
+
+				//确认积分使用
+				//$this->db->query("UPDATE " . DB_PREFIX . "customer_reward SET status=1, date_confirm = NOW() where customer_id =" . $order_info['customer_id'] . " and order_id=" . $order_id);
+
+				//确认coupon 使用记录
+				//$this->db->query("UPDATE " . DB_PREFIX . "coupon_history SET status=1,date_confirm=NOW() WHERE customer_id=" . (int) $data['customer_id'] . " AND order_id=" . $order_id);
+			}
+			// Send out any gift voucher mails
+			if ($this->config->get('config_complete_status_id') == $order_status_id) {
+				$this->load->model('checkout/voucher');
+
+				$this->model_checkout_voucher->confirm($order_id);
+			}
+
+		}
+	}
 }

@@ -145,7 +145,7 @@ echo $header;
                                 <?php if (!isset($customer_id)) {?>
                                 <div class="form-group required col-md-12">
                                 <!--<label class="control-label" for="input-shipping-email"><?php echo $entry_email; ?></label>-->
-                                <input type="text" name="email" value="" placeholder="<?php echo str_replace(':','',$entry_email); ?>" id="input-email" class="form-control" />
+                                <input type="text" name="email" value="<?php echo $paypal_express_email ?>" placeholder="<?php echo str_replace(':','',$entry_email); ?>" id="input-email" class="form-control" />
                                 </div>
                                 <?php } ?>
                                 <div class=" form-group col-md-12">
@@ -238,6 +238,13 @@ echo $header;
                                 <!--<label class="control-label" for="input-shipping-zone"><?php echo $entry_zone; ?></label>-->
 
                                     <select name="shipping_zone_id" id="input-shipping-zone" class="form-control">
+					<?php foreach ($zones as $zone) { ?>
+					<?php if ($zone['zone_id'] == $shipping_zone_id) { ?>
+					<option value="<?php echo $zone['zone_id']; ?>" selected="selected"><?php echo $zone['name']; ?></option>
+					<?php } else { ?>
+					<option value="<?php echo $zone['zone_id']; ?>"><?php echo $zone['name']; ?></option>
+					<?php } ?>
+					<?php } ?>
                                     </select>
 
                             </div>
@@ -248,12 +255,12 @@ echo $header;
                                 <?php if (!isset($customer_id)) {?>
                                 <div class="form-group col-md-12">
 
-                                    <input type="checkbox" name="register" checked="checked" onclick="if (this.checked == true) jQuery('.register-form').show(); else jQuery('.register-form').hide();">&nbsp;<lable class="control-label"><?php echo $text_register; ?></lable>
+                                    <input type="checkbox" name="register"  onclick="if (this.checked == true) jQuery('.register-form').show(); else jQuery('.register-form').hide();">&nbsp;<lable class="control-label"><?php echo $text_register; ?></lable>
                                 </div>
 
 
 
-                                <div class="register-form form-group col-md-12" >
+                                <div class="register-form form-group col-md-12" style="display:none" >
                                 <div class="row">
                                 <div class=" required col-md-6">
                                 <!--<label class="control-label" for="input-payment-password"><?php echo $entry_password; ?></label>-->

@@ -31,74 +31,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pp_standard2.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/controller/payment/pp_standard2.php">
+      <file leaf-file-name="cart.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/cart.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6206896">
-              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+            <state vertical-scroll-proportion="-10.964286">
+              <caret line="124" column="57" selection-start-line="124" selection-start-column="57" selection-end-line="124" selection-end-column="57" />
               <folding>
-                <marker date="1446617826862" expanded="true" signature="8106:8269" placeholder="SELECT * FRO..." />
-                <marker date="1446617826862" expanded="true" signature="10259:10520" placeholder="SELECT * FRO..." />
-                <marker date="1446617826862" expanded="true" signature="14294:14457" placeholder="SELECT * FRO..." />
-                <marker date="1446617826862" expanded="true" signature="14502:14704" placeholder="SELECT * FRO..." />
-                <marker date="1446617826862" expanded="true" signature="73578:73807" placeholder="INSERT INTO ..." />
-                <marker date="1446617826862" expanded="true" signature="74412:74581" placeholder="INSERT INTO ..." />
-                <marker date="1446617826862" expanded="true" signature="75075:75244" placeholder="INSERT INTO ..." />
-                <marker date="1446617826862" expanded="true" signature="75698:75867" placeholder="INSERT INTO ..." />
-                <marker date="1446617826862" expanded="true" signature="76182:76351" placeholder="INSERT INTO ..." />
-                <marker date="1446617826862" expanded="true" signature="76652:76881" placeholder="INSERT INTO ..." />
-                <marker date="1446617826862" expanded="true" signature="77500:77669" placeholder="INSERT INTO ..." />
-                <marker date="1446617826862" expanded="true" signature="78198:78367" placeholder="INSERT INTO ..." />
-                <marker date="1446617826862" expanded="true" signature="78815:78984" placeholder="INSERT INTO ..." />
-                <marker date="1446617826862" expanded="true" signature="79261:79430" placeholder="INSERT INTO ..." />
-                <marker date="1446617826862" expanded="true" signature="81406:81575" placeholder="INSERT INTO ..." />
+                <element signature="n#style#0;n#a#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#section#0;n#div#3;n#div#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pp_standard2.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/model/payment/pp_standard2.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-61.149426">
-              <caret line="286" column="55" selection-start-line="286" selection-start-column="55" selection-end-line="286" selection-end-column="55" />
-              <folding>
-                <marker date="1446617872862" expanded="true" signature="2468:2730" placeholder="SELECT * FRO..." />
-                <marker date="1446617872862" expanded="true" signature="3409:3864" placeholder="INSERT INTO ..." />
-                <marker date="1446617872862" expanded="true" signature="4075:5144" placeholder="INSERT INTO ..." />
-                <marker date="1446617872862" expanded="true" signature="11421:11665" placeholder="SELECT * FRO..." />
-                <marker date="1446617872862" expanded="true" signature="11833:12201" placeholder="SELECT SUM(`..." />
-                <marker date="1446617872862" expanded="true" signature="12323:12496" placeholder="SELECT SUM(`..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nicocheckout.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/controller/checkout/nicocheckout.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.267857">
-              <caret line="2934" column="31" selection-start-line="2934" selection-start-column="20" selection-end-line="2934" selection-end-column="31" />
-              <folding>
-                <element signature="n#guest#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
-                <element signature="n#payment_address_validate#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
-                <element signature="n#country#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
-                <element signature="n#login_validate#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
-                <element signature="n#cart#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
-                <element signature="n#voucher#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
-                <element signature="n#coupon#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
-                <element signature="n#reward#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nicocheckout.tpl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/nicocheckout.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.75516695">
-              <caret line="502" column="26" selection-start-line="502" selection-start-column="26" selection-end-line="502" selection-end-column="26" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -106,38 +46,96 @@
       <file leaf-file-name="pp_express.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/controller/payment/pp_express.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.464286">
-              <caret line="22" column="27" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="27" />
+            <state vertical-scroll-proportion="-32.275864">
+              <caret line="194" column="50" selection-start-line="194" selection-start-column="30" selection-end-line="194" selection-end-column="50" />
               <folding>
-                <element signature="n#express#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-                <element signature="n#expressReturn#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-                <element signature="n#expressConfirm#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-                <element signature="n#expressComplete#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-                <element signature="n#checkoutReturn#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-                <element signature="n#ipn#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-                <element signature="n#shipping#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-                <element signature="n#shippingValidate#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-                <element signature="n#recurringCancel#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-                <element signature="n#validateCoupon#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-                <element signature="n#validateVoucher#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-                <element signature="n#validateReward#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-                <element signature="n#recurringButtons#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-                <marker date="1446618917149" expanded="true" signature="8139:8302" placeholder="SELECT * FRO..." />
-                <marker date="1446618917149" expanded="true" signature="10292:10553" placeholder="SELECT * FRO..." />
-                <marker date="1446618917149" expanded="true" signature="14327:14490" placeholder="SELECT * FRO..." />
-                <marker date="1446618917149" expanded="true" signature="14535:14737" placeholder="SELECT * FRO..." />
-                <marker date="1446618917149" expanded="true" signature="73439:73668" placeholder="INSERT INTO ..." />
-                <marker date="1446618917149" expanded="true" signature="74273:74442" placeholder="INSERT INTO ..." />
-                <marker date="1446618917149" expanded="true" signature="74936:75105" placeholder="INSERT INTO ..." />
-                <marker date="1446618917149" expanded="true" signature="75559:75728" placeholder="INSERT INTO ..." />
-                <marker date="1446618917149" expanded="true" signature="76043:76212" placeholder="INSERT INTO ..." />
-                <marker date="1446618917149" expanded="true" signature="76513:76742" placeholder="INSERT INTO ..." />
-                <marker date="1446618917149" expanded="true" signature="77361:77530" placeholder="INSERT INTO ..." />
-                <marker date="1446618917149" expanded="true" signature="78059:78228" placeholder="INSERT INTO ..." />
-                <marker date="1446618917149" expanded="true" signature="78676:78845" placeholder="INSERT INTO ..." />
-                <marker date="1446618917149" expanded="true" signature="79122:79291" placeholder="INSERT INTO ..." />
-                <marker date="1446618917149" expanded="true" signature="81255:81424" placeholder="INSERT INTO ..." />
+                <marker date="1446631581015" expanded="true" signature="7735:7898" placeholder="SELECT * FRO..." />
+                <marker date="1446631581015" expanded="true" signature="8141:8263" placeholder="SELECT * FRO..." />
+                <marker date="1446631581015" expanded="true" signature="27198:27424" placeholder="INSERT INTO ..." />
+                <marker date="1446631581015" expanded="true" signature="28194:28359" placeholder="INSERT INTO ..." />
+                <marker date="1446631581015" expanded="true" signature="28965:29130" placeholder="INSERT INTO ..." />
+                <marker date="1446631581015" expanded="true" signature="29696:29861" placeholder="INSERT INTO ..." />
+                <marker date="1446631581015" expanded="true" signature="30271:30436" placeholder="INSERT INTO ..." />
+                <marker date="1446631581015" expanded="true" signature="30832:31058" placeholder="INSERT INTO ..." />
+                <marker date="1446631581015" expanded="true" signature="31834:31999" placeholder="INSERT INTO ..." />
+                <marker date="1446631581015" expanded="true" signature="32673:32838" placeholder="INSERT INTO ..." />
+                <marker date="1446631581015" expanded="true" signature="33398:33563" placeholder="INSERT INTO ..." />
+                <marker date="1446631581015" expanded="true" signature="33935:34100" placeholder="INSERT INTO ..." />
+                <marker date="1446631581015" expanded="true" signature="36355:36520" placeholder="INSERT INTO ..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nicocheckout.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/catalog/controller/checkout/nicocheckout.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.24165341">
+              <caret line="1172" column="9" selection-start-line="1172" selection-start-column="9" selection-end-line="1172" selection-end-column="9" />
+              <folding>
+                <element signature="n#shipping_address#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="zone.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/model/localisation/zone.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.428571">
+              <caret line="8" column="39" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="39" />
+              <folding>
+                <marker date="1434015460000" expanded="true" signature="116:208" placeholder="SELECT * FRO..." />
+                <marker date="1434015460000" expanded="true" signature="405:517" placeholder="SELECT * FRO..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="customer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/library/customer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.142858">
+              <caret line="115" column="28" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="28" />
+              <folding>
+                <element signature="n#__construct#0;n#Customer#0;n#!!top" expanded="false" />
+                <element signature="n#login#0;n#Customer#0;n#!!top" expanded="false" />
+                <element signature="n#logout#0;n#Customer#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shipping_address.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/shipping_address.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="51.24138">
+              <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
+              <folding>
+                <marker date="1446630311345" expanded="true" signature="6638:6652" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/register.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1445502999114" expanded="true" signature="25454:25468" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nicocheckout.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/nicocheckout.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.3255813">
+              <caret line="262" column="99" selection-start-line="262" selection-start-column="99" selection-end-line="262" selection-end-column="99" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -147,10 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/account/recurring_info.tpl" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/account/recurring_list.tpl" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/account/register.tpl" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/account/return_form.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/account/return_info.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/account/return_list.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/account/reward.tpl" />
@@ -170,13 +164,11 @@
         <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/nico_payment_method.tpl" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/payment/pp_standard.tpl" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/cart.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/nico_cart.tpl" />
         <option value="$PROJECT_DIR$/admin/model/sale/order.php" />
         <option value="$PROJECT_DIR$/catalog/language/english/checkout/nicocheckout.php" />
         <option value="$PROJECT_DIR$/catalog/model/account/customer.php" />
         <option value="$PROJECT_DIR$/catalog/model/account/address.php" />
-        <option value="$PROJECT_DIR$/catalog/model/checkout/order.php" />
         <option value="$PROJECT_DIR$/catalog/controller/common/checkheader.php" />
         <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/common/checkheader.tpl" />
         <option value="$PROJECT_DIR$/catalog/controller/checkout/checkout.php" />
@@ -193,11 +185,17 @@
         <option value="$PROJECT_DIR$/admin/view/template/payment/pp_standard2_order.tpl" />
         <option value="$PROJECT_DIR$/admin/view/template/payment/pp_standard2_search.tpl" />
         <option value="$PROJECT_DIR$/admin/language/english/payment/pp_standard2.php" />
-        <option value="$PROJECT_DIR$/catalog/controller/payment/pp_standard2.php" />
         <option value="$PROJECT_DIR$/catalog/model/payment/pp_standard2.php" />
+        <option value="$PROJECT_DIR$/catalog/language/english/payment/pp_standard2.php" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/payment/pp_standard2.tpl" />
+        <option value="$PROJECT_DIR$/catalog/controller/payment/pp_onestep.php" />
+        <option value="$PROJECT_DIR$/catalog/model/checkout/order.php" />
+        <option value="$PROJECT_DIR$/catalog/controller/payment/pp_standard2.php" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/cart.tpl" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/shipping_address.tpl" />
         <option value="$PROJECT_DIR$/catalog/controller/payment/pp_express.php" />
-        <option value="$PROJECT_DIR$/catalog/controller/checkout/nicocheckout.php" />
         <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/nicocheckout.tpl" />
+        <option value="$PROJECT_DIR$/catalog/controller/checkout/nicocheckout.php" />
       </list>
     </option>
   </component>
@@ -244,78 +242,7 @@
       <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pav_clothes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pav_clothes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pav_clothes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pav_clothes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pav_clothes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pav_clothes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pav_clothes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pav_clothes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pav_clothes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="checkout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
     </panes>
   </component>
@@ -383,6 +310,9 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",SHOW_INHERITED" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -408,7 +338,7 @@
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21489972" sideWeight="0.48924732" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23495702" sideWeight="0.48924732" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293011" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293011" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -444,7 +374,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/catalog/controller/checkout/nicocheckout.php</url>
-          <line>110</line>
+          <line>81</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -454,100 +384,30 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/catalog/controller/payment/pp_express.php</url>
-          <line>22</line>
+          <line>24</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/catalog/controller/payment/pp_onestep.php</url>
+          <line>546</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/catalog/controller/payment/pp_onestep.php</url>
+          <line>603</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/catalog/controller/payment/pp_onestep.php</url>
+          <line>592</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/payment/amazon_checkout_payment.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7510917">
-          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/language/english/payment/pp_standard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11062591">
-          <caret line="4" column="62" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/language/english/checkout/cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.321428">
-          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/payment/pp_standard.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.053572">
-          <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/cart.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27656478">
-          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/nico_cart.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3392857">
-          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/model/sale/order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27549466">
-          <caret line="174" column="13" selection-start-line="174" selection-start-column="13" selection-end-line="174" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/controller/payment/pp_standard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/controller/account/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6084425">
-          <caret line="20" column="69" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/language/english/checkout/nicocheckout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30858806">
-          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/model/shipping/flat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/model/account/address.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/catalog/model/localisation/country.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -559,20 +419,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="59" column="56" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/model/checkout/order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="4272" selection-start-line="9" selection-start-column="4272" selection-end-line="9" selection-end-column="4272" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/library/customer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.071428">
-          <caret line="161" column="35" selection-start-line="161" selection-start-column="20" selection-end-line="161" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -678,14 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3838" column="0" selection-start-line="3838" selection-start-column="0" selection-end-line="3838" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/payment/pp_express.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7142856">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -830,104 +668,272 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/controller/payment/pp_standard2.php">
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/payment/pp_express.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6206896">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding>
-            <marker date="1446617826862" expanded="true" signature="8106:8269" placeholder="SELECT * FRO..." />
-            <marker date="1446617826862" expanded="true" signature="10259:10520" placeholder="SELECT * FRO..." />
-            <marker date="1446617826862" expanded="true" signature="14294:14457" placeholder="SELECT * FRO..." />
-            <marker date="1446617826862" expanded="true" signature="14502:14704" placeholder="SELECT * FRO..." />
-            <marker date="1446617826862" expanded="true" signature="73578:73807" placeholder="INSERT INTO ..." />
-            <marker date="1446617826862" expanded="true" signature="74412:74581" placeholder="INSERT INTO ..." />
-            <marker date="1446617826862" expanded="true" signature="75075:75244" placeholder="INSERT INTO ..." />
-            <marker date="1446617826862" expanded="true" signature="75698:75867" placeholder="INSERT INTO ..." />
-            <marker date="1446617826862" expanded="true" signature="76182:76351" placeholder="INSERT INTO ..." />
-            <marker date="1446617826862" expanded="true" signature="76652:76881" placeholder="INSERT INTO ..." />
-            <marker date="1446617826862" expanded="true" signature="77500:77669" placeholder="INSERT INTO ..." />
-            <marker date="1446617826862" expanded="true" signature="78198:78367" placeholder="INSERT INTO ..." />
-            <marker date="1446617826862" expanded="true" signature="78815:78984" placeholder="INSERT INTO ..." />
-            <marker date="1446617826862" expanded="true" signature="79261:79430" placeholder="INSERT INTO ..." />
-            <marker date="1446617826862" expanded="true" signature="81406:81575" placeholder="INSERT INTO ..." />
-          </folding>
+        <state vertical-scroll-proportion="0.11062591">
+          <caret line="4" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/language/english/payment/pp_standard2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13828239">
+          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/model/payment/pp_standard2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-61.149426">
-          <caret line="286" column="55" selection-start-line="286" selection-start-column="55" selection-end-line="286" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="335" column="31" selection-start-line="335" selection-start-column="20" selection-end-line="335" selection-end-column="31" />
           <folding>
-            <marker date="1446617872862" expanded="true" signature="2468:2730" placeholder="SELECT * FRO..." />
-            <marker date="1446617872862" expanded="true" signature="3409:3864" placeholder="INSERT INTO ..." />
-            <marker date="1446617872862" expanded="true" signature="4075:5144" placeholder="INSERT INTO ..." />
-            <marker date="1446617872862" expanded="true" signature="11421:11665" placeholder="SELECT * FRO..." />
-            <marker date="1446617872862" expanded="true" signature="11833:12201" placeholder="SELECT SUM(`..." />
-            <marker date="1446617872862" expanded="true" signature="12323:12496" placeholder="SELECT SUM(`..." />
+            <marker date="1446617872862" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446617872862" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446617872862" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446617872862" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446617872862" expanded="true" signature="-1:-1" placeholder="SELECT SUM(`..." />
+            <marker date="1446617872862" expanded="true" signature="-1:-1" placeholder="SELECT SUM(`..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/payment/pp_onestep.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05783866">
+          <caret line="2" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="622" selection-end-column="2" />
+          <folding>
+            <marker date="1446621920628" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446621920628" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446621920628" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446621920628" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446621920628" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446621920628" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446621920628" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446621920628" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446621920628" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446621920628" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/payment/pp_standard2.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33187774">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/payment/pp_express_confirm.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6317322">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/payment/pp_standard.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77874815">
+          <caret line="50" column="76" selection-start-line="50" selection-start-column="73" selection-end-line="50" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/payment/pp_standard2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.153729">
+          <caret line="68" column="9" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
+          <folding>
+            <marker date="1446623341475" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446623341475" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446623341475" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446623341475" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446623341475" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446623341475" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446623341475" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446623341475" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446623341475" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446623341475" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/model/checkout/order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4562798">
+          <caret line="924" column="18" selection-start-line="924" selection-start-column="18" selection-end-line="924" selection-end-column="18" />
+          <folding>
+            <element signature="n#addOrder#0;n#ModelCheckoutOrder#0;n#!!top" expanded="false" />
+            <element signature="n#editOrder#0;n#ModelCheckoutOrder#0;n#!!top" expanded="false" />
+            <element signature="n#deleteOrder#0;n#ModelCheckoutOrder#0;n#!!top" expanded="false" />
+            <element signature="n#getOrder#0;n#ModelCheckoutOrder#0;n#!!top" expanded="false" />
+            <element signature="n#addOrderHistory#0;n#ModelCheckoutOrder#0;n#!!top" expanded="false" />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT *, (S..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT os.na..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/payment/pp_standard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.027656477">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/payment/liqpay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41484717">
+          <caret line="27" column="74" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/cart.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.964286">
+          <caret line="124" column="57" selection-start-line="124" selection-start-column="57" selection-end-line="124" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#section#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/library/customer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.142858">
+          <caret line="115" column="28" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="28" />
+          <folding>
+            <element signature="n#__construct#0;n#Customer#0;n#!!top" expanded="false" />
+            <element signature="n#login#0;n#Customer#0;n#!!top" expanded="false" />
+            <element signature="n#logout#0;n#Customer#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/controller/payment/pp_express.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.464286">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="27" />
+        <state vertical-scroll-proportion="-32.275864">
+          <caret line="194" column="50" selection-start-line="194" selection-start-column="30" selection-end-line="194" selection-end-column="50" />
           <folding>
-            <element signature="n#express#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-            <element signature="n#expressReturn#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-            <element signature="n#expressConfirm#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-            <element signature="n#expressComplete#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-            <element signature="n#checkoutReturn#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-            <element signature="n#ipn#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-            <element signature="n#shipping#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-            <element signature="n#shippingValidate#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-            <element signature="n#recurringCancel#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-            <element signature="n#validateCoupon#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-            <element signature="n#validateVoucher#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-            <element signature="n#validateReward#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-            <element signature="n#recurringButtons#0;n#ControllerPaymentPPExpress#0;n#!!top" expanded="false" />
-            <marker date="1446618917149" expanded="true" signature="8139:8302" placeholder="SELECT * FRO..." />
-            <marker date="1446618917149" expanded="true" signature="10292:10553" placeholder="SELECT * FRO..." />
-            <marker date="1446618917149" expanded="true" signature="14327:14490" placeholder="SELECT * FRO..." />
-            <marker date="1446618917149" expanded="true" signature="14535:14737" placeholder="SELECT * FRO..." />
-            <marker date="1446618917149" expanded="true" signature="73439:73668" placeholder="INSERT INTO ..." />
-            <marker date="1446618917149" expanded="true" signature="74273:74442" placeholder="INSERT INTO ..." />
-            <marker date="1446618917149" expanded="true" signature="74936:75105" placeholder="INSERT INTO ..." />
-            <marker date="1446618917149" expanded="true" signature="75559:75728" placeholder="INSERT INTO ..." />
-            <marker date="1446618917149" expanded="true" signature="76043:76212" placeholder="INSERT INTO ..." />
-            <marker date="1446618917149" expanded="true" signature="76513:76742" placeholder="INSERT INTO ..." />
-            <marker date="1446618917149" expanded="true" signature="77361:77530" placeholder="INSERT INTO ..." />
-            <marker date="1446618917149" expanded="true" signature="78059:78228" placeholder="INSERT INTO ..." />
-            <marker date="1446618917149" expanded="true" signature="78676:78845" placeholder="INSERT INTO ..." />
-            <marker date="1446618917149" expanded="true" signature="79122:79291" placeholder="INSERT INTO ..." />
-            <marker date="1446618917149" expanded="true" signature="81255:81424" placeholder="INSERT INTO ..." />
+            <marker date="1446631581015" expanded="true" signature="7735:7898" placeholder="SELECT * FRO..." />
+            <marker date="1446631581015" expanded="true" signature="8141:8263" placeholder="SELECT * FRO..." />
+            <marker date="1446631581015" expanded="true" signature="27198:27424" placeholder="INSERT INTO ..." />
+            <marker date="1446631581015" expanded="true" signature="28194:28359" placeholder="INSERT INTO ..." />
+            <marker date="1446631581015" expanded="true" signature="28965:29130" placeholder="INSERT INTO ..." />
+            <marker date="1446631581015" expanded="true" signature="29696:29861" placeholder="INSERT INTO ..." />
+            <marker date="1446631581015" expanded="true" signature="30271:30436" placeholder="INSERT INTO ..." />
+            <marker date="1446631581015" expanded="true" signature="30832:31058" placeholder="INSERT INTO ..." />
+            <marker date="1446631581015" expanded="true" signature="31834:31999" placeholder="INSERT INTO ..." />
+            <marker date="1446631581015" expanded="true" signature="32673:32838" placeholder="INSERT INTO ..." />
+            <marker date="1446631581015" expanded="true" signature="33398:33563" placeholder="INSERT INTO ..." />
+            <marker date="1446631581015" expanded="true" signature="33935:34100" placeholder="INSERT INTO ..." />
+            <marker date="1446631581015" expanded="true" signature="36355:36520" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/controller/checkout/nicocheckout.php">
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/login.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.267857">
-          <caret line="2934" column="31" selection-start-line="2934" selection-start-column="20" selection-end-line="2934" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.5372907">
+          <caret line="31" column="51" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/register.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#guest#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
-            <element signature="n#payment_address_validate#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
-            <element signature="n#country#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
-            <element signature="n#login_validate#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
-            <element signature="n#cart#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
-            <element signature="n#voucher#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
-            <element signature="n#coupon#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
-            <element signature="n#reward#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
+            <marker date="1445502999114" expanded="true" signature="25454:25468" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/model/localisation/zone.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.428571">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="39" />
+          <folding>
+            <marker date="1434015460000" expanded="true" signature="116:208" placeholder="SELECT * FRO..." />
+            <marker date="1434015460000" expanded="true" signature="405:517" placeholder="SELECT * FRO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/shipping_address.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="51.24138">
+          <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
+          <folding>
+            <marker date="1446630311345" expanded="true" signature="6638:6652" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/nicocheckout.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75516695">
-          <caret line="502" column="26" selection-start-line="502" selection-start-column="26" selection-end-line="502" selection-end-column="26" />
+        <state vertical-scroll-proportion="-2.3255813">
+          <caret line="262" column="99" selection-start-line="262" selection-start-column="99" selection-end-line="262" selection-end-column="99" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/checkout/nicocheckout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24165341">
+          <caret line="1172" column="9" selection-start-line="1172" selection-start-column="9" selection-end-line="1172" selection-end-column="9" />
+          <folding>
+            <element signature="n#shipping_address#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
