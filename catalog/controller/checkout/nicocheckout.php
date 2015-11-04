@@ -1,27 +1,11 @@
 <?php 
 class ControllerCheckoutNicoCheckout extends Controller { 
-	
-	public function deleteCustomer($customer_id) {
-		$this->db->query("DELETE FROM " . DB_PREFIX . "customer WHERE customer_id = '" . (int)$customer_id . "'");
-		$this->db->query("DELETE FROM " . DB_PREFIX . "customer_reward WHERE customer_id = '" . (int)$customer_id . "'");
-		$this->db->query("DELETE FROM " . DB_PREFIX . "customer_transaction WHERE customer_id = '" . (int)$customer_id . "'");
-		$this->db->query("DELETE FROM " . DB_PREFIX . "customer_ip WHERE customer_id = '" . (int)$customer_id . "'");
-		$this->db->query("DELETE FROM " . DB_PREFIX . "address WHERE customer_id = '" . (int)$customer_id . "'");
-	}
-	
+
 	public function index() 
 	{
 		$data = array();
 
 
-		//if (!isset($this->session->data['guest']['customer_group_id'])) $this->session->data['guest']['customer_group_id'] = '';
-		//if (!isset($this->session->data['payment_zone_id '])) $this->session->data['payment_zone_id '] = '';
-
-		if (isset($_REQUEST['product_id'])) 
-		{
-			$this->cart->add($_REQUEST['product_id'], 1, null, null);
-		}
-		
 		if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))) {
 			 $this->response->redirect($this->url->link('checkout/cart'));
 		}
@@ -49,27 +33,25 @@ class ControllerCheckoutNicoCheckout extends Controller {
 				unset($this->session->data['payment_country_id']);
 				unset($this->session->data['payment_zone_id']);
 
-				//if customer account was created by checkout module then delete it
-				//$this->deleteCustomer($this->session->data['customer_id']);
-				//unset($this->session->data['nicocheckout_customer_id']);
+
 			}
 			else 
 			{
-			//	$this->customer->logout();
+
 			}
 		}
 		
-		//var_dump($this->session->data);
+
 
 		$this->validate($data);
 		$this->login(false, $data);
-		$this->guest(false, $data);
+		//$this->guest(false, $data);
 		$this->checkout(false, $data);
 		$this->shipping_address(false, $data);
 		$this->shipping_method(false, $data);
 		$this->payment_method(false, $data);
-		$this->payment_address(false, $data);
-		//$this->cart(false);
+		//$this->payment_address(false, $data);
+		$this->cart(false);
 		$this->confirm(false, $data);
 		//var_dump($data);
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/nicocheckout.tpl')) {
@@ -79,12 +61,12 @@ class ControllerCheckoutNicoCheckout extends Controller {
 		}
 
 
-			$data['column_left'] = $this->load->controller('common/column_left');
-			$data['column_right'] = $this->load->controller('common/column_right');
-			$data['content_top'] = $this->load->controller('common/content_top');
-			$data['content_bottom'] = $this->load->controller('common/content_bottom');
-			$data['footer'] = $this->load->controller('common/footer');
-			$data['header'] = $this->load->controller('common/header');			
+		$data['column_left'] = $this->load->controller('common/column_left');
+		$data['column_right'] = $this->load->controller('common/column_right');
+		$data['content_top'] = $this->load->controller('common/content_top');
+		$data['content_bottom'] = $this->load->controller('common/content_bottom');
+		$data['footer'] = $this->load->controller('common/footer');
+		$data['header'] = $this->load->controller('common/checkheader');
 
         
         if (isset($this->request->get['quickconfirm'])) {
@@ -103,8 +85,8 @@ class ControllerCheckoutNicoCheckout extends Controller {
 
 
 
-			$this->session->data['_nicocheckout'] = $data;
-			$this->response->setOutput($this->load->view($template, $data));
+		$this->session->data['_nicocheckout'] = $data;
+		$this->response->setOutput($this->load->view($template, $data));
 
   	}
 	
@@ -1099,6 +1081,7 @@ class ControllerCheckoutNicoCheckout extends Controller {
 		$data['entry_city'] = $this->language->get('entry_city');
 		$data['entry_country'] = $this->language->get('entry_country');
 		$data['entry_zone'] = $this->language->get('entry_zone');
+		$data['entry_telephone'] = $this->language->get('entry_telephone');
 
 		$data['button_continue'] = $this->language->get('button_continue');
 
@@ -1117,25 +1100,62 @@ class ControllerCheckoutNicoCheckout extends Controller {
 
 		$data['addresses'] = $this->model_account_address->getAddresses();
 
-		if (isset($this->session->data['shipping_postcode'])) {
-			$data['postcode'] = $this->session->data['shipping_postcode'];
+
+
+
+		if (isset($this->session->data['shipping_firstname'])) {
+			$data['shipping_firstname'] = $this->session->data['shipping_firstname'];
 		} else {
-			$data['postcode'] = '';
+			$data['shipping_firstname'] = '';
+		}
+
+		if (isset($this->session->data['shipping_lastname'])) {
+			$data['shipping_lastname'] = $this->session->data['shipping_lastname'];
+		} else {
+			$data['shipping_lastname'] = '';
+		}
+		if (isset($this->session->data['shipping_address_1'])) {
+			$data['shipping_address_1'] = $this->session->data['shipping_address_1'];
+		} else {
+			$data['shipping_address_1'] = '';
+		}
+		if (isset($this->session->data['shipping_address_2'])) {
+			$data['shipping_address_2'] = $this->session->data['shipping_address_2'];
+		} else {
+			$data['shipping_address_2'] = '';
+		}
+		if (isset($this->session->data['shipping_telephone'])) {
+			$data['shipping_telephone'] = $this->session->data['shipping_telephone'];
+		} else {
+			$data['shipping_telephone'] = '';
+		}
+		if (isset($this->session->data['shipping_city'])) {
+			$data['shipping_city'] = $this->session->data['shipping_city'];
+		} else {
+			$data['shipping_city'] = '';
+		}
+		if (isset($this->session->data['shipping_postcode'])) {
+			$data['shipping_postcode'] = $this->session->data['shipping_postcode'];
+		} else {
+			$data['shipping_postcode'] = '';
 		}
 
 		if (isset($this->session->data['shipping_country_id'])) {
-			$data['country_id'] = $this->session->data['shipping_country_id'];
+			$data['shipping_country_id'] = $this->session->data['shipping_country_id'];
 		} else {
-			if ($this->config->get('config_tax_default') == 'shipping')
-			$data['country_id'] = $this->config->get('config_country_id');
-			else $data['country_id'] = '';
+			if ($this->config->get('config_tax_default') == 'shipping') {
+				$data['shipping_country_id'] = $this->config->get('config_country_id');
+			} else {
+				$data['shipping_country_id'] = '';
+			}
 		}
 
 		if (isset($this->session->data['shipping_zone_id'])) {
-			$data['zone_id'] = $this->session->data['shipping_zone_id'];
+			$data['shipping_zone_id'] = $this->session->data['shipping_zone_id'];
 		} else {
-			$data['zone_id'] = '';
+			$data['shipping_zone_id'] = '';
 		}
+
 
 		$this->load->model('localisation/country');
 
