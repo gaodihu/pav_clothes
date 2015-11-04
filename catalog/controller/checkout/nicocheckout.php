@@ -2189,7 +2189,12 @@ class ControllerCheckoutNicoCheckout extends Controller {
 		if ($render !== false)
 		{
 			//$this->response->redirect($this->url->link('payment/' . $this->session->data['payment_method']['code']));
-			echo $data['payment'] = $this->load->controller('payment/' . $this->session->data['payment_method']['code']);
+			//echo $data['payment'] = $this->load->controller('payment/' . $this->session->data['payment_method']['code']);
+			$json['redirect'] = $this->url->link('payment/' . $this->session->data['payment_method']['code'], '', 'SSL');
+
+
+			$this->response->setOutput(json_encode($json));
+
 		}
 
   	}
@@ -2925,4 +2930,27 @@ class ControllerCheckoutNicoCheckout extends Controller {
 
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
-	}}
+	}
+
+    public function place_order(){
+		$data = array();
+		$json = array();
+		if (!$this->customer->isLogged()) {
+			if (isset($_REQUEST['register']) && !empty($_REQUEST['register'])) {
+				$json = $this->register_validate($data);
+			} else {
+				if (!isset($this->session->data['customer_id'])) $json = $this->guest_validate($data);
+			}
+		}
+		//if (!isset($json['error']) /*&& !$this->customer->isLogged()*/) $json = array_merge($json, $this->payment_address_validate());
+		if (!isset($json['error'])) $json = array_merge($json, $this->shipping_address_validate());
+		if (!isset($json['error'])) $json = array_merge($json, $this->shipping_method_validate());
+		if (!isset($json['error'])) $json = array_merge($json, $this->payment_method_validate());
+		if($json['error']){
+			$this->response->setOutput(json_encode($json));
+		}else{
+			$this->confirm();
+		}
+	}
+
+}

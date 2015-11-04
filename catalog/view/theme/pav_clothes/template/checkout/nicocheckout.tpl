@@ -66,7 +66,7 @@ echo $header;
 
 
 
-		<form class="form-inline" role="form">
+		<form class="form-inline login-form" role="form">
 
 
 		<label class="control-label" for="input-email"><?php echo $entry_email; ?></label>
@@ -76,7 +76,7 @@ echo $header;
 		<label class="control-label" for="input-password"><?php echo $entry_password; ?></label>
 		<input type="password" name="password" value="" placeholder="<?php echo str_replace(':','',$entry_password); ?>" id="input-password" class="form-control" />
 		<a href="<?php echo $forgotten; ?>"><?php echo $text_forgotten; ?></a>
-		
+
 
 
 		</form>
@@ -84,7 +84,7 @@ echo $header;
 		</div>
 		<div class="modal-footer">
 
-		<input type="button" class="btn btn-primary" data-loading-text="<?php if (isset($text_loading)) echo $text_loading;else echo 'loading ...' ?>" value="<?php echo $button_login; ?>"></input>
+		<input id="button-login" type="button" class="btn btn-primary" data-loading-text="<?php if (isset($text_loading)) echo $text_loading;else echo 'loading ...' ?>" value="<?php echo $button_login; ?>"></input>
 		</div>
 		</div>
 		</div>
@@ -472,7 +472,7 @@ $(document).delegate('#place-order', 'click', function()
 	data += '&_shipping_method='+ jQuery('.checkout_form input[name=\'shipping_method\']:checked').prop('title') + '&_payment_method=' + jQuery('.checkout_form input[name=\'payment_method\']:checked').prop('title');
 	
     $.ajax({
-        url: 'index.php?route=checkout/nicocheckout/validate',
+        url: 'index.php?route=checkout/nicocheckout/place_order',
         type: 'post',
         data: data,
         dataType: 'json',
@@ -484,9 +484,10 @@ $(document).delegate('#place-order', 'click', function()
         },          
         success: function(json) {
             $('.alert, .text-danger').remove();
-                        
+
             if (json['redirect']) {
-                location = json['redirect'];                
+
+                location = json['redirect'];
             } else if (json['error']) {
 				error = true;
                 if (json['error']['warning']) {
@@ -498,8 +499,8 @@ $(document).delegate('#place-order', 'click', function()
 		}
             } else 
 	    {
-			error = false;
-			jQuery('[name=\'payment_method\']:checked').click();
+			//error = false;
+			//jQuery('[name=\'payment_method\']:checked').click();
             }    
         },
         error: function(xhr, ajaxOptions, thrownError) {
@@ -591,12 +592,11 @@ $('body').delegate('[name=\'payment_method\']','click', function()
         url: 'index.php?route=checkout/nicocheckout/confirm',
         type: 'post',
         data: data,
-        success: function(html) 
+	dataType: 'json',
+        success: function(json)
         {
-			jQuery(".payment").html(html);
-			<?php if ($checkout_payment_auto_cofirm) {?>
-			jQuery("#button-confirm").click();
-			<?php } ?>
+		location = json['redirect'];
+
         },
         error: function(xhr, ajaxOptions, thrownError) {
             alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
