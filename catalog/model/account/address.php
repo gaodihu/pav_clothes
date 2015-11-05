@@ -137,9 +137,10 @@ class ModelAccountAddress extends Model {
 				'country_id'     => $result['country_id'],
 				'country'        => $country,
 				'iso_code_2'     => $iso_code_2,
-				'iso_code_3'     => $iso_code_3,
-				'address_format' => $address_format,
-				'custom_field'   => unserialize($result['custom_field'])
+				//'iso_code_3'     => $iso_code_3,
+				//'address_format' => $address_format,
+				//'custom_field'   => unserialize($result['custom_field']),
+				'telephone'      => $result['telephone'],
 
 			);
 		}

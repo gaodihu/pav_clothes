@@ -232,31 +232,36 @@ class ControllerPaymentPPExpress extends Controller {
                 'zone_id' => $shipping_address['zone_id'],
                 'zone_name' => $shipping_address['zone_name'],
                 'country_id' => $shipping_address['country_id'],
-                'telephone' => $shipping_address['phone'],
+                'telephone' => $shipping_address['telephone'],
                 'is_paypal' => 1,
             );
             $current_address_id = 0;
-            $address_list =  $this->model_account_address->getAddresses();
-            foreach($address_list as $item){
-                if(
-                    strtolower($item['firstname'])  == strtolower($address_data['firstname']) && 
-                    strtolower($item['lastname'])  == strtolower($address_data['lastname']) && 
-                    strtolower($item['address_1'])  == strtolower($address_data['address_1']) && 
-                    strtolower($item['address_2'])  == strtolower($address_data['address_2']) && 
-                    strtolower($item['postcode'])  == strtolower($address_data['postcode']) && 
-                    strtolower($item['city'])  == strtolower($address_data['city']) && 
-                    strtolower($item['zone_id'])  == strtolower($address_data['zone_id']) && 
-                    strtolower($item['country_id'])  == strtolower($address_data['country_id']) && 
-                     strtolower($item['telephone'])  == strtolower($address_data['telephone'])
-                   ){
+            $address_list = $this->model_account_address->getAddresses();
+            foreach ($address_list as $item) {
+                if (
+                    strtolower($item['firstname']) == strtolower($address_data['firstname']) &&
+                    strtolower($item['lastname']) == strtolower($address_data['lastname']) &&
+                    strtolower($item['address_1']) == strtolower($address_data['address_1']) &&
+                    strtolower($item['address_2']) == strtolower($address_data['address_2']) &&
+                    strtolower($item['postcode']) == strtolower($address_data['postcode']) &&
+                    strtolower($item['city']) == strtolower($address_data['city']) &&
+                    strtolower($item['zone_id']) == strtolower($address_data['zone_id']) &&
+                    strtolower($item['country_id']) == strtolower($address_data['country_id']) &&
+                    strtolower($item['telephone']) == strtolower($address_data['telephone'])
+                ) {
                     $current_address_id = $item['address_id'];
                 }
             }
-            if($current_address_id<=0){
-                $address_id = $this->model_account_address->addAddress($address_data);
-                $current_address_id = $address_id;
+
+            if ($current_address_id <= 0) {
+                //$address_id = $this->model_account_address->addAddress($address_data);
+                //$current_address_id = $address_id;
+                $this->session->data['shipping_address'] = $shipping_address;
+
+            } else {
+                $this->session->data['shipping_address'] = $this->model_account_address->getAddress($current_address_id);
+                $this->session->data['pp_express_address_id'] = $this->session->data['shipping_address']['address_id'];
             }
-            $this->session->data['shipping_address'] = $this->model_account_address->getAddress($current_address_id);
         } else {
             $this->session->data['shipping_address'] = $shipping_address;
         }

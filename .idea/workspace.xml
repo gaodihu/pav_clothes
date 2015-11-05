@@ -34,34 +34,28 @@
       <file leaf-file-name="cart.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/cart.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.964286">
+            <state vertical-scroll-proportion="-10.285714">
               <caret line="124" column="57" selection-start-line="124" selection-start-column="57" selection-end-line="124" selection-end-column="57" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#section#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="pp_express.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/controller/payment/pp_express.php">
+        <entry file="file://$PROJECT_DIR$/catalog/model/payment/pp_express.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-32.275864">
-              <caret line="194" column="50" selection-start-line="194" selection-start-column="30" selection-end-line="194" selection-end-column="50" />
+            <state vertical-scroll-proportion="-6.107143">
+              <caret line="87" column="38" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="38" />
               <folding>
-                <marker date="1446631581015" expanded="true" signature="7735:7898" placeholder="SELECT * FRO..." />
-                <marker date="1446631581015" expanded="true" signature="8141:8263" placeholder="SELECT * FRO..." />
-                <marker date="1446631581015" expanded="true" signature="27198:27424" placeholder="INSERT INTO ..." />
-                <marker date="1446631581015" expanded="true" signature="28194:28359" placeholder="INSERT INTO ..." />
-                <marker date="1446631581015" expanded="true" signature="28965:29130" placeholder="INSERT INTO ..." />
-                <marker date="1446631581015" expanded="true" signature="29696:29861" placeholder="INSERT INTO ..." />
-                <marker date="1446631581015" expanded="true" signature="30271:30436" placeholder="INSERT INTO ..." />
-                <marker date="1446631581015" expanded="true" signature="30832:31058" placeholder="INSERT INTO ..." />
-                <marker date="1446631581015" expanded="true" signature="31834:31999" placeholder="INSERT INTO ..." />
-                <marker date="1446631581015" expanded="true" signature="32673:32838" placeholder="INSERT INTO ..." />
-                <marker date="1446631581015" expanded="true" signature="33398:33563" placeholder="INSERT INTO ..." />
-                <marker date="1446631581015" expanded="true" signature="33935:34100" placeholder="INSERT INTO ..." />
-                <marker date="1446631581015" expanded="true" signature="36355:36520" placeholder="INSERT INTO ..." />
+                <element signature="n#call#0;n#ModelPaymentPPExpress#0;n#!!top" expanded="false" />
+                <element signature="n#createToken#0;n#ModelPaymentPPExpress#0;n#!!top" expanded="false" />
+                <element signature="n#log#0;n#ModelPaymentPPExpress#0;n#!!top" expanded="false" />
+                <marker date="1446609059805" expanded="true" signature="2448:2708" placeholder="SELECT * FRO..." />
+                <marker date="1446609059805" expanded="true" signature="3379:3834" placeholder="INSERT INTO ..." />
+                <marker date="1446609059805" expanded="true" signature="4045:5114" placeholder="INSERT INTO ..." />
+                <marker date="1446609059805" expanded="true" signature="11387:11631" placeholder="SELECT * FRO..." />
+                <marker date="1446609059805" expanded="true" signature="11799:12167" placeholder="SELECT SUM(`..." />
+                <marker date="1446609059805" expanded="true" signature="12289:12462" placeholder="SELECT SUM(`..." />
               </folding>
             </state>
           </provider>
@@ -70,61 +64,38 @@
       <file leaf-file-name="nicocheckout.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/catalog/controller/checkout/nicocheckout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24165341">
-              <caret line="1172" column="9" selection-start-line="1172" selection-start-column="9" selection-end-line="1172" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.21144675">
+              <caret line="233" column="12" selection-start-line="233" selection-start-column="12" selection-end-line="233" selection-end-column="12" />
               <folding>
+                <element signature="n#guest_validate#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
+                <element signature="n#shipping_address_validate#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
+                <element signature="n#shipping_method_validate#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
+                <element signature="n#payment_method_validate#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
+                <element signature="n#login#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
+                <element signature="n#guest#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
+                <element signature="n#checkout#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
                 <element signature="n#shipping_address#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
+                <element signature="n#payment_address#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="zone.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/model/localisation/zone.php">
+      <file leaf-file-name="address.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/model/account/address.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.428571">
-              <caret line="8" column="39" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="39" />
+            <state vertical-scroll-proportion="4.395349">
+              <caret line="39" column="30" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="30" />
               <folding>
-                <marker date="1434015460000" expanded="true" signature="116:208" placeholder="SELECT * FRO..." />
-                <marker date="1434015460000" expanded="true" signature="405:517" placeholder="SELECT * FRO..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="customer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/library/customer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.142858">
-              <caret line="115" column="28" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="28" />
-              <folding>
-                <element signature="n#__construct#0;n#Customer#0;n#!!top" expanded="false" />
-                <element signature="n#login#0;n#Customer#0;n#!!top" expanded="false" />
-                <element signature="n#logout#0;n#Customer#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shipping_address.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/shipping_address.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="51.24138">
-              <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
-              <folding>
-                <marker date="1446630311345" expanded="true" signature="6638:6652" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/register.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1445502999114" expanded="true" signature="25454:25468" placeholder="..." />
+                <marker date="1446705592587" expanded="true" signature="250:1058" placeholder="INSERT INTO ..." />
+                <marker date="1446705592587" expanded="true" signature="2732:2872" placeholder="DELETE FROM ..." />
+                <marker date="1446705592587" expanded="true" signature="3031:3182" placeholder="SELECT DISTI..." />
+                <marker date="1446705592587" expanded="true" signature="3259:3367" placeholder="SELECT * FRO..." />
+                <marker date="1446705592587" expanded="true" signature="3760:3859" placeholder="SELECT * FRO..." />
+                <marker date="1446705592587" expanded="true" signature="5136:5234" placeholder="SELECT * FRO..." />
+                <marker date="1446705592587" expanded="true" signature="5315:5411" placeholder="SELECT * FRO..." />
+                <marker date="1446705592587" expanded="true" signature="5804:5891" placeholder="SELECT * FRO..." />
+                <marker date="1446705592587" expanded="true" signature="7002:7116" placeholder="SELECT COUNT..." />
               </folding>
             </state>
           </provider>
@@ -133,9 +104,79 @@
       <file leaf-file-name="nicocheckout.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/nicocheckout.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.3255813">
-              <caret line="262" column="99" selection-start-line="262" selection-start-column="99" selection-end-line="262" selection-end-column="99" />
-              <folding />
+            <state vertical-scroll-proportion="-8.464286">
+              <caret line="93" column="300" selection-start-line="93" selection-start-column="300" selection-end-line="93" selection-end-column="300" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pp_express.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/controller/payment/pp_express.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.6785714">
+              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+              <folding>
+                <marker date="1446712344126" expanded="true" signature="7735:7898" placeholder="SELECT * FRO..." />
+                <marker date="1446712344126" expanded="true" signature="8141:8263" placeholder="SELECT * FRO..." />
+                <marker date="1446712344126" expanded="true" signature="27417:27643" placeholder="INSERT INTO ..." />
+                <marker date="1446712344126" expanded="true" signature="28413:28578" placeholder="INSERT INTO ..." />
+                <marker date="1446712344126" expanded="true" signature="29184:29349" placeholder="INSERT INTO ..." />
+                <marker date="1446712344126" expanded="true" signature="29915:30080" placeholder="INSERT INTO ..." />
+                <marker date="1446712344126" expanded="true" signature="30490:30655" placeholder="INSERT INTO ..." />
+                <marker date="1446712344126" expanded="true" signature="31051:31277" placeholder="INSERT INTO ..." />
+                <marker date="1446712344126" expanded="true" signature="32053:32218" placeholder="INSERT INTO ..." />
+                <marker date="1446712344126" expanded="true" signature="32892:33057" placeholder="INSERT INTO ..." />
+                <marker date="1446712344126" expanded="true" signature="33617:33782" placeholder="INSERT INTO ..." />
+                <marker date="1446712344126" expanded="true" signature="34154:34319" placeholder="INSERT INTO ..." />
+                <marker date="1446712344126" expanded="true" signature="36574:36739" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="extension.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/model/extension/extension.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1434015460000" expanded="true" signature="114:204" placeholder="SELECT * FRO..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/model/extension/module.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1434015460000" expanded="true" signature="119:200" placeholder="SELECT * FRO..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pavwidget.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/model/extension/pavwidget.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1434015462000" expanded="true" signature="885:1263" placeholder="CREATE TABLE..IF..." />
+                <marker date="1434015462000" expanded="true" signature="1645:1905" placeholder="INSERT INTO ..." />
+                <marker date="1434015462000" expanded="true" signature="2291:2383" placeholder="DELETE FROM ..." />
+                <marker date="1434015462000" expanded="true" signature="2480:2588" placeholder="SELECT * FRO..." />
+                <marker date="1434015462000" expanded="true" signature="2825:2916" placeholder="SELECT * FRO..." />
+                <marker date="1434015462000" expanded="true" signature="3142:3250" placeholder="SELECT * FRO..." />
+                <marker date="1434015462000" expanded="true" signature="3363:3453" placeholder="DELETE FROM ..." />
+                <marker date="1434015462000" expanded="true" signature="3543:3636" placeholder="DELETE FROM ..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -168,7 +209,6 @@
         <option value="$PROJECT_DIR$/admin/model/sale/order.php" />
         <option value="$PROJECT_DIR$/catalog/language/english/checkout/nicocheckout.php" />
         <option value="$PROJECT_DIR$/catalog/model/account/customer.php" />
-        <option value="$PROJECT_DIR$/catalog/model/account/address.php" />
         <option value="$PROJECT_DIR$/catalog/controller/common/checkheader.php" />
         <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/common/checkheader.tpl" />
         <option value="$PROJECT_DIR$/catalog/controller/checkout/checkout.php" />
@@ -193,6 +233,7 @@
         <option value="$PROJECT_DIR$/catalog/controller/payment/pp_standard2.php" />
         <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/cart.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/shipping_address.tpl" />
+        <option value="$PROJECT_DIR$/catalog/model/account/address.php" />
         <option value="$PROJECT_DIR$/catalog/controller/payment/pp_express.php" />
         <option value="$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/nicocheckout.tpl" />
         <option value="$PROJECT_DIR$/catalog/controller/checkout/nicocheckout.php" />
@@ -239,11 +280,100 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pav_clothes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pav_clothes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pav_clothes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pav_clothes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pav_clothes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pav_clothes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pav_clothes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="total" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pav_clothes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pav_clothes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pav_clothes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pav_clothes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -338,14 +468,13 @@
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23495702" sideWeight="0.48924732" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16117479" sideWeight="0.48924732" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293011" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293011" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15114613" sideWeight="0.49462366" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1747851" sideWeight="0.49462366" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17413294" sideWeight="0.5107527" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -353,6 +482,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.67069894" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -402,47 +532,27 @@
           <line>592</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/catalog/controller/checkout/nicocheckout.php</url>
+          <line>1173</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/catalog/controller/checkout/nicocheckout.php</url>
+          <line>2165</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/catalog/controller/checkout/nicocheckout.php</url>
+          <line>2804</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/catalog/model/localisation/country.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="77" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/model/account/customer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="56" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/controller/checkout/cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.275862">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ocmod/pavblog.ocmod.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3328467">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/library/cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="21.758621">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2891933">
@@ -468,7 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="150" column="73" selection-start-line="150" selection-start-column="62" selection-end-line="150" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -476,7 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="121" column="66" selection-start-line="121" selection-start-column="60" selection-end-line="121" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -484,7 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="110" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -492,7 +599,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="169" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -500,7 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="87" column="58" selection-start-line="87" selection-start-column="58" selection-end-line="87" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -508,7 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -516,7 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="72" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -524,7 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3838" column="0" selection-start-line="3838" selection-start-column="0" selection-end-line="3838" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -532,7 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -540,9 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41484717">
           <caret line="384" column="33" selection-start-line="384" selection-start-column="33" selection-end-line="384" selection-end-column="33" />
-          <folding>
-            <marker date="1446609059795" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -550,7 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.6785714">
           <caret line="1" column="33" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -558,9 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.87356323">
           <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-          <folding>
-            <marker date="1446611223659" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -568,7 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.62068963">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -576,7 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.091954">
           <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -584,7 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.402299">
           <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -592,7 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.091954">
           <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -600,21 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.494253">
           <caret line="194" column="57" selection-start-line="194" selection-start-column="57" selection-end-line="194" selection-end-column="57" />
-          <folding>
-            <marker date="1446611374973" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..IF..." />
-            <marker date="1446611374973" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..IF..." />
-            <marker date="1446611374973" expanded="true" signature="-1:-1" placeholder="DROP TABLE I..." />
-            <marker date="1446611374973" expanded="true" signature="-1:-1" placeholder="DROP TABLE I..." />
-            <marker date="1446611374973" expanded="true" signature="-1:-1" placeholder="SELECT SUM(`..." />
-            <marker date="1446611374973" expanded="true" signature="-1:-1" placeholder="SELECT SUM(`..." />
-            <marker date="1446611374973" expanded="true" signature="-1:-1" placeholder="SELECT SUM(`..." />
-            <marker date="1446611374973" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446611374973" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446611374973" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446611374973" expanded="true" signature="-1:-1" placeholder="SELECT `ot`...." />
-            <marker date="1446611374973" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446611374973" expanded="true" signature="-1:-1" placeholder="SELECT `o`.`..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -622,7 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-77.09196">
           <caret line="388" column="111" selection-start-line="388" selection-start-column="111" selection-end-line="388" selection-end-column="111" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -630,7 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.218391">
           <caret line="167" column="58" selection-start-line="167" selection-start-column="58" selection-end-line="167" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -638,7 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6781609">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -646,7 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.402299">
           <caret line="173" column="44" selection-start-line="173" selection-start-column="44" selection-end-line="173" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -654,9 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.1018922">
           <caret line="6" column="83" selection-start-line="6" selection-start-column="83" selection-end-line="6" selection-end-column="83" />
-          <folding>
-            <marker date="1446617063116" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -664,7 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.09394904">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -672,7 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11062591">
           <caret line="4" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -680,7 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13828239">
           <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,14 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="335" column="31" selection-start-line="335" selection-start-column="20" selection-end-line="335" selection-end-column="31" />
-          <folding>
-            <marker date="1446617872862" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446617872862" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446617872862" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446617872862" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446617872862" expanded="true" signature="-1:-1" placeholder="SELECT SUM(`..." />
-            <marker date="1446617872862" expanded="true" signature="-1:-1" placeholder="SELECT SUM(`..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -703,18 +760,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.05783866">
           <caret line="2" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="622" selection-end-column="2" />
-          <folding>
-            <marker date="1446621920628" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446621920628" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446621920628" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446621920628" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446621920628" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446621920628" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446621920628" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446621920628" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446621920628" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446621920628" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -722,7 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33187774">
           <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -730,7 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.6317322">
           <caret line="25" column="23" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -738,7 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.77874815">
           <caret line="50" column="76" selection-start-line="50" selection-start-column="73" selection-end-line="50" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -746,18 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.153729">
           <caret line="68" column="9" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
-          <folding>
-            <marker date="1446623341475" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446623341475" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446623341475" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446623341475" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446623341475" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446623341475" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446623341475" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446623341475" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446623341475" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446623341475" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -765,58 +796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4562798">
           <caret line="924" column="18" selection-start-line="924" selection-start-column="18" selection-end-line="924" selection-end-column="18" />
-          <folding>
-            <element signature="n#addOrder#0;n#ModelCheckoutOrder#0;n#!!top" expanded="false" />
-            <element signature="n#editOrder#0;n#ModelCheckoutOrder#0;n#!!top" expanded="false" />
-            <element signature="n#deleteOrder#0;n#ModelCheckoutOrder#0;n#!!top" expanded="false" />
-            <element signature="n#getOrder#0;n#ModelCheckoutOrder#0;n#!!top" expanded="false" />
-            <element signature="n#addOrderHistory#0;n#ModelCheckoutOrder#0;n#!!top" expanded="false" />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT *, (S..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT os.na..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1446623194332" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -824,7 +803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.027656477">
           <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -832,23 +810,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41484717">
           <caret line="27" column="74" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/cart.tpl">
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/login.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.964286">
-          <caret line="124" column="57" selection-start-line="124" selection-start-column="57" selection-end-line="124" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.5372907">
+          <caret line="31" column="51" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/model/localisation/zone.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22125182">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="39" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#section#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+            <marker date="1434015460000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1434015460000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/library/customer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.142858">
+        <state vertical-scroll-proportion="0.0">
           <caret line="115" column="28" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="28" />
           <folding>
             <element signature="n#__construct#0;n#Customer#0;n#!!top" expanded="false" />
@@ -858,33 +843,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/controller/payment/pp_express.php">
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/shipping_address.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-32.275864">
-          <caret line="194" column="50" selection-start-line="194" selection-start-column="30" selection-end-line="194" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
           <folding>
-            <marker date="1446631581015" expanded="true" signature="7735:7898" placeholder="SELECT * FRO..." />
-            <marker date="1446631581015" expanded="true" signature="8141:8263" placeholder="SELECT * FRO..." />
-            <marker date="1446631581015" expanded="true" signature="27198:27424" placeholder="INSERT INTO ..." />
-            <marker date="1446631581015" expanded="true" signature="28194:28359" placeholder="INSERT INTO ..." />
-            <marker date="1446631581015" expanded="true" signature="28965:29130" placeholder="INSERT INTO ..." />
-            <marker date="1446631581015" expanded="true" signature="29696:29861" placeholder="INSERT INTO ..." />
-            <marker date="1446631581015" expanded="true" signature="30271:30436" placeholder="INSERT INTO ..." />
-            <marker date="1446631581015" expanded="true" signature="30832:31058" placeholder="INSERT INTO ..." />
-            <marker date="1446631581015" expanded="true" signature="31834:31999" placeholder="INSERT INTO ..." />
-            <marker date="1446631581015" expanded="true" signature="32673:32838" placeholder="INSERT INTO ..." />
-            <marker date="1446631581015" expanded="true" signature="33398:33563" placeholder="INSERT INTO ..." />
-            <marker date="1446631581015" expanded="true" signature="33935:34100" placeholder="INSERT INTO ..." />
-            <marker date="1446631581015" expanded="true" signature="36355:36520" placeholder="INSERT INTO ..." />
+            <marker date="1446630311345" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/login.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5372907">
-          <caret line="31" column="51" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -893,46 +858,139 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1445502999114" expanded="true" signature="25454:25468" placeholder="..." />
+            <marker date="1445502999114" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/model/localisation/zone.php">
+    <entry file="file://$PROJECT_DIR$/catalog/model/account/address.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.428571">
-          <caret line="8" column="39" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="39" />
+        <state vertical-scroll-proportion="4.395349">
+          <caret line="39" column="30" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="30" />
           <folding>
-            <marker date="1434015460000" expanded="true" signature="116:208" placeholder="SELECT * FRO..." />
-            <marker date="1434015460000" expanded="true" signature="405:517" placeholder="SELECT * FRO..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/shipping_address.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="51.24138">
-          <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
-          <folding>
-            <marker date="1446630311345" expanded="true" signature="6638:6652" placeholder="..." />
+            <marker date="1446705592587" expanded="true" signature="250:1058" placeholder="INSERT INTO ..." />
+            <marker date="1446705592587" expanded="true" signature="2732:2872" placeholder="DELETE FROM ..." />
+            <marker date="1446705592587" expanded="true" signature="3031:3182" placeholder="SELECT DISTI..." />
+            <marker date="1446705592587" expanded="true" signature="3259:3367" placeholder="SELECT * FRO..." />
+            <marker date="1446705592587" expanded="true" signature="3760:3859" placeholder="SELECT * FRO..." />
+            <marker date="1446705592587" expanded="true" signature="5136:5234" placeholder="SELECT * FRO..." />
+            <marker date="1446705592587" expanded="true" signature="5315:5411" placeholder="SELECT * FRO..." />
+            <marker date="1446705592587" expanded="true" signature="5804:5891" placeholder="SELECT * FRO..." />
+            <marker date="1446705592587" expanded="true" signature="7002:7116" placeholder="SELECT COUNT..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/nicocheckout.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3255813">
-          <caret line="262" column="99" selection-start-line="262" selection-start-column="99" selection-end-line="262" selection-end-column="99" />
+        <state vertical-scroll-proportion="-8.464286">
+          <caret line="93" column="300" selection-start-line="93" selection-start-column="300" selection-end-line="93" selection-end-column="300" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/model/payment/pp_express.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.107143">
+          <caret line="87" column="38" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="38" />
+          <folding>
+            <element signature="n#call#0;n#ModelPaymentPPExpress#0;n#!!top" expanded="false" />
+            <element signature="n#createToken#0;n#ModelPaymentPPExpress#0;n#!!top" expanded="false" />
+            <element signature="n#log#0;n#ModelPaymentPPExpress#0;n#!!top" expanded="false" />
+            <marker date="1446609059805" expanded="true" signature="2448:2708" placeholder="SELECT * FRO..." />
+            <marker date="1446609059805" expanded="true" signature="3379:3834" placeholder="INSERT INTO ..." />
+            <marker date="1446609059805" expanded="true" signature="4045:5114" placeholder="INSERT INTO ..." />
+            <marker date="1446609059805" expanded="true" signature="11387:11631" placeholder="SELECT * FRO..." />
+            <marker date="1446609059805" expanded="true" signature="11799:12167" placeholder="SELECT SUM(`..." />
+            <marker date="1446609059805" expanded="true" signature="12289:12462" placeholder="SELECT SUM(`..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/payment/pp_express.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6785714">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <folding>
+            <marker date="1446712344126" expanded="true" signature="7735:7898" placeholder="SELECT * FRO..." />
+            <marker date="1446712344126" expanded="true" signature="8141:8263" placeholder="SELECT * FRO..." />
+            <marker date="1446712344126" expanded="true" signature="27417:27643" placeholder="INSERT INTO ..." />
+            <marker date="1446712344126" expanded="true" signature="28413:28578" placeholder="INSERT INTO ..." />
+            <marker date="1446712344126" expanded="true" signature="29184:29349" placeholder="INSERT INTO ..." />
+            <marker date="1446712344126" expanded="true" signature="29915:30080" placeholder="INSERT INTO ..." />
+            <marker date="1446712344126" expanded="true" signature="30490:30655" placeholder="INSERT INTO ..." />
+            <marker date="1446712344126" expanded="true" signature="31051:31277" placeholder="INSERT INTO ..." />
+            <marker date="1446712344126" expanded="true" signature="32053:32218" placeholder="INSERT INTO ..." />
+            <marker date="1446712344126" expanded="true" signature="32892:33057" placeholder="INSERT INTO ..." />
+            <marker date="1446712344126" expanded="true" signature="33617:33782" placeholder="INSERT INTO ..." />
+            <marker date="1446712344126" expanded="true" signature="34154:34319" placeholder="INSERT INTO ..." />
+            <marker date="1446712344126" expanded="true" signature="36574:36739" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/model/extension/extension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1434015460000" expanded="true" signature="114:204" placeholder="SELECT * FRO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/model/extension/module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1434015460000" expanded="true" signature="119:200" placeholder="SELECT * FRO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/model/extension/pavwidget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1434015462000" expanded="true" signature="885:1263" placeholder="CREATE TABLE..IF..." />
+            <marker date="1434015462000" expanded="true" signature="1645:1905" placeholder="INSERT INTO ..." />
+            <marker date="1434015462000" expanded="true" signature="2291:2383" placeholder="DELETE FROM ..." />
+            <marker date="1434015462000" expanded="true" signature="2480:2588" placeholder="SELECT * FRO..." />
+            <marker date="1434015462000" expanded="true" signature="2825:2916" placeholder="SELECT * FRO..." />
+            <marker date="1434015462000" expanded="true" signature="3142:3250" placeholder="SELECT * FRO..." />
+            <marker date="1434015462000" expanded="true" signature="3363:3453" placeholder="DELETE FROM ..." />
+            <marker date="1434015462000" expanded="true" signature="3543:3636" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/pav_clothes/template/checkout/cart.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.285714">
+          <caret line="124" column="57" selection-start-line="124" selection-start-column="57" selection-end-line="124" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/controller/checkout/nicocheckout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24165341">
-          <caret line="1172" column="9" selection-start-line="1172" selection-start-column="9" selection-end-line="1172" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.21144675">
+          <caret line="233" column="12" selection-start-line="233" selection-start-column="12" selection-end-line="233" selection-end-column="12" />
           <folding>
+            <element signature="n#guest_validate#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
+            <element signature="n#shipping_address_validate#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
+            <element signature="n#shipping_method_validate#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
+            <element signature="n#payment_method_validate#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
+            <element signature="n#login#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
+            <element signature="n#guest#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
+            <element signature="n#checkout#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
             <element signature="n#shipping_address#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
+            <element signature="n#payment_address#0;n#ControllerCheckoutNicoCheckout#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
